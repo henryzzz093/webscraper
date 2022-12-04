@@ -1,0 +1,68 @@
+[2022-11-13 23:21:49,044] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-uptonflat manual__2022-11-13T23:21:47.576489+00:00 [queued]>
+[2022-11-13 23:21:49,063] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-uptonflat manual__2022-11-13T23:21:47.576489+00:00 [queued]>
+[2022-11-13 23:21:49,068] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 23:21:49,071] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 23:21:49,073] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 23:21:49,084] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-uptonflat> on 2022-11-13 23:21:47.576489+00:00
+[2022-11-13 23:21:49,092] {standard_task_runner.py:52} INFO - Started process 4810 to run task
+[2022-11-13 23:21:49,095] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-uptonflat', 'manual__2022-11-13T23:21:47.576489+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmp5b7uriqi', '--error-file', '/tmp/tmpkvo3n1gt']
+[2022-11-13 23:21:49,104] {standard_task_runner.py:80} INFO - Job 6: Subtask run-webscraper-uptonflat
+[2022-11-13 23:21:49,236] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-uptonflat manual__2022-11-13T23:21:47.576489+00:00 [running]> on host b2897896724f
+[2022-11-13 23:21:49,471] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-uptonflat
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-13T23:21:47.576489+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-13T23:21:47.576489+00:00
+[2022-11-13 23:21:49,578] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 23:21:49,639] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 23:23:13,605] {docker.py:310} INFO - UPTONFLAT
+Running Webscraper!
+Scraping: https://www.uptonflats.com/floorplans
+{'floorplan': 'One Bedroom Plan 1 - 1A', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '503 Sq. Ft.', 'available': '3 Available', 'rent': '$1,595\nto\n-$1,740', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 189, 'created_at': '2022-11-13T15:22:54.319322-08:00', 'updated_at': '2022-11-13T15:22:54.319430-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 1 - 1A', 'available': '3 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '503 Sq. Ft.', 'deposit': '$500', 'rent': '$1,595\nto\n-$1,740'}
+{'floorplan': 'One Bedroom Plan 1B', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '473 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 192, 'created_at': '2022-11-13T15:22:59.599230-08:00', 'updated_at': '2022-11-13T15:22:59.599279-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 1B', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '473 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 2', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '699 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 193, 'created_at': '2022-11-13T15:22:59.856665-08:00', 'updated_at': '2022-11-13T15:22:59.856694-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 2', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '699 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 2C1', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '705 Sq. Ft.', 'available': '1 Available', 'rent': '$1,995', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 194, 'created_at': '2022-11-13T15:23:00.199897-08:00', 'updated_at': '2022-11-13T15:23:00.199928-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 2C1', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '705 Sq. Ft.', 'deposit': '$500', 'rent': '$1,995'}
+{'floorplan': 'One Bedroom Plan 2D', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '729 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 195, 'created_at': '2022-11-13T15:23:00.473998-08:00', 'updated_at': '2022-11-13T15:23:00.474046-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 2D', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '729 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 3', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '640 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 196, 'created_at': '2022-11-13T15:23:00.751313-08:00', 'updated_at': '2022-11-13T15:23:00.751342-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 3', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '640 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 3A', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '683 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 198, 'created_at': '2022-11-13T15:23:01.001580-08:00', 'updated_at': '2022-11-13T15:23:01.001607-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 3A', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '683 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 4', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '549 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 201, 'created_at': '2022-11-13T15:23:06.225964-08:00', 'updated_at': '2022-11-13T15:23:06.225994-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 4', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '549 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 4A', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '589 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 202, 'created_at': '2022-11-13T15:23:06.539270-08:00', 'updated_at': '2022-11-13T15:23:06.539298-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 4A', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '589 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 6', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '765 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 203, 'created_at': '2022-11-13T15:23:06.770737-08:00', 'updated_at': '2022-11-13T15:23:06.770764-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 6', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '765 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 5', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '650 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 204, 'created_at': '2022-11-13T15:23:07.005238-08:00', 'updated_at': '2022-11-13T15:23:07.005271-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 5', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '650 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 2C', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '705 Sq. Ft.', 'available': '1 Available', 'rent': '$1,895', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 207, 'created_at': '2022-11-13T15:23:12.408400-08:00', 'updated_at': '2022-11-13T15:23:12.408440-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 2C', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '705 Sq. Ft.', 'deposit': '$500', 'rent': '$1,895'}
+{'floorplan': 'One Bedroom Plan 2E', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '749 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 208, 'created_at': '2022-11-13T15:23:12.719095-08:00', 'updated_at': '2022-11-13T15:23:12.719136-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 2E', 'available': '0 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '749 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'One Bedroom Plan 2A', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '705 Sq. Ft.', 'available': '1 Available', 'rent': '$1,985', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 209, 'created_at': '2022-11-13T15:23:13.017336-08:00', 'updated_at': '2022-11-13T15:23:13.017365-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'One Bedroom Plan 2A', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '705 Sq. Ft.', 'deposit': '$500', 'rent': '$1,985'}
+{'floorplan': 'Two Bedroom Plan 11', 'bedrooms': '2 Beds', 'baths': '1 Bath', 'size': '1,004 Sq. Ft.', 'available': '1 Available', 'rent': '$2,630', 'deposit': 'Varies', 'company': 'UptonFlat'}
+{'id': 210, 'created_at': '2022-11-13T15:23:13.334689-08:00', 'updated_at': '2022-11-13T15:23:13.334716-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'Two Bedroom Plan 11', 'available': '1 Available', 'bedrooms': '2 Beds', 'baths': '1 Bath', 'size': '1,004 Sq. Ft.', 'deposit': 'Varies', 'rent': '$2,630'}
+{'floorplan': 'Two Bedroom Plan 9', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '1,011 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+[2022-11-13 23:23:20,181] {docker.py:310} INFO - {'id': 211, 'created_at': '2022-11-13T15:23:13.586915-08:00', 'updated_at': '2022-11-13T15:23:13.586953-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'Two Bedroom Plan 9', 'available': '0 Available', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '1,011 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'Two Bedroom Plan 7', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '942 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 212, 'created_at': '2022-11-13T15:23:13.879927-08:00', 'updated_at': '2022-11-13T15:23:13.879959-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'Two Bedroom Plan 7', 'available': '0 Available', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '942 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'Two Bedroom Plan 11A', 'bedrooms': '2 Beds', 'baths': '1 Bath', 'size': '957 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 224, 'created_at': '2022-11-13T15:23:19.311137-08:00', 'updated_at': '2022-11-13T15:23:19.311196-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'Two Bedroom Plan 11A', 'available': '0 Available', 'bedrooms': '2 Beds', 'baths': '1 Bath', 'size': '957 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+{'floorplan': 'Two Bedroom Plan 8', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '1,024 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': 'Varies', 'company': 'UptonFlat'}
+{'id': 225, 'created_at': '2022-11-13T15:23:19.769882-08:00', 'updated_at': '2022-11-13T15:23:19.769916-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'Two Bedroom Plan 8', 'available': '0 Available', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '1,024 Sq. Ft.', 'deposit': 'Varies', 'rent': 'Call for details'}
+{'floorplan': 'Two Bedroom Plan 10', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '912 Sq. Ft.', 'available': '0 Available', 'rent': 'Call for details', 'deposit': '$500', 'company': 'UptonFlat'}
+{'id': 226, 'created_at': '2022-11-13T15:23:20.172260-08:00', 'updated_at': '2022-11-13T15:23:20.172290-08:00', 'company': 'UptonFlat', 'date': '2022-11-13', 'floorplan': 'Two Bedroom Plan 10', 'available': '0 Available', 'bedrooms': '2 Beds', 'baths': '2 Baths', 'size': '912 Sq. Ft.', 'deposit': '$500', 'rent': 'Call for details'}
+Scraping job completed!
+[2022-11-13 23:23:20,539] {taskinstance.py:1415} INFO - Marking task as SUCCESS. dag_id=run_webscrapers, task_id=run-webscraper-uptonflat, execution_date=20221113T232147, start_date=20221113T232149, end_date=20221113T232320
+[2022-11-13 23:23:20,594] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-13 23:23:20,635] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -91,7 +91,7 @@ DATABASES = {
             "USER": "api",
             "PASSWORD": "temporarypassword",
             "HOST": "host.docker.internal",
-            "PORT": 3306,
+            "PORT": 3307,
         }
     }
 

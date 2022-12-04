@@ -1,0 +1,183 @@
+[2022-11-13 21:02:28,794] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T21:02:27.651804+00:00 [queued]>
+[2022-11-13 21:02:28,807] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T21:02:27.651804+00:00 [queued]>
+[2022-11-13 21:02:28,809] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:02:28,811] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 21:02:28,813] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:02:28,826] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-11-13 21:02:27.651804+00:00
+[2022-11-13 21:02:28,831] {standard_task_runner.py:52} INFO - Started process 371 to run task
+[2022-11-13 21:02:28,834] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'manual__2022-11-13T21:02:27.651804+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmprqha47aw', '--error-file', '/tmp/tmpii76u6j8']
+[2022-11-13 21:02:28,838] {standard_task_runner.py:80} INFO - Job 7: Subtask run-webscraper-two_lincoln
+[2022-11-13 21:02:28,906] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T21:02:27.651804+00:00 [running]> on host c943e7c407a4
+[2022-11-13 21:02:28,968] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-13T21:02:27.651804+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-13T21:02:27.651804+00:00
+[2022-11-13 21:02:29,022] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 21:02:29,072] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 21:02:43,282] {docker.py:310} INFO - TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+[2022-11-13 21:02:43,287] {docker.py:310} INFO - Traceback (most recent call last):
+[2022-11-13 21:02:43,290] {docker.py:310} INFO - File "/app/main.py", line 120, in <module>
+[2022-11-13 21:02:43,294] {docker.py:310} INFO - action_class.run()
+  File "/app/main.py", line 42, in run
+[2022-11-13 21:02:43,306] {docker.py:310} INFO - self.connect()
+  File "/app/main.py", line 26, in connect
+[2022-11-13 21:02:43,316] {docker.py:310} INFO - self.driver = webdriver.Remote(
+[2022-11-13 21:02:43,321] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+[2022-11-13 21:02:43,324] {docker.py:310} INFO - self.start_session(capabilities, browser_profile)
+[2022-11-13 21:02:43,328] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+[2022-11-13 21:02:43,333] {docker.py:310} INFO - response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2022-11-13 21:02:43,337] {docker.py:310} INFO - self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+[2022-11-13 21:02:43,345] {docker.py:310} INFO - raise exception_class(message, screen, stacktrace)
+[2022-11-13 21:02:43,350] {docker.py:310} INFO - selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 21:02:43,353] {docker.py:310} INFO - 
+[2022-11-13 21:02:43,854] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmpp7giyj1l")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 315, in _run_image_with_mounts
+    raise AirflowException(f'Docker container failed: {repr(result)} lines {joined_log_lines}')
+airflow.exceptions.AirflowException: Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+self.connect()
+  File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+
+[2022-11-13 21:02:43,895] {taskinstance.py:1415} INFO - Marking task as UP_FOR_RETRY. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20221113T210227, start_date=20221113T210228, end_date=20221113T210243
+[2022-11-13 21:02:43,937] {standard_task_runner.py:92} ERROR - Failed to execute job 7 for task run-webscraper-two_lincoln (Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+self.connect()
+  File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+; 371)
+[2022-11-13 21:02:44,021] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 21:02:44,097] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

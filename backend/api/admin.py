@@ -17,5 +17,17 @@ class ApartmentsAdmin(admin.ModelAdmin):
         "updated_at",
     ]
     
+class AirlineAdmin(admin.ModelAdmin):
+    list_display = [
+        "airline", 
+        "departure_time",
+        "destination_time",
+        "price",
+        "stops",
+        "duration",
+    ]
+        
+
 
 admin.site.register(models.Apartments, ApartmentsAdmin)
+admin.site.register(models.Airline, AirlineAdmin)

@@ -4,6 +4,7 @@ from . import viewsets
 
 routes = SimpleRouter()
 
-routes.register(r"apartments", viewsets.ApartmentsViewSet)
+routes.register(r"apartment", viewsets.ApartmentsViewSet)
+routes.register(r"airline", viewsets.AirlineViewSet)
 
 urlpatterns = [*routes.urls]

@@ -1,0 +1,252 @@
+[2022-11-13 21:11:37,809] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T21:06:22.807771+00:00 [queued]>
+[2022-11-13 21:11:37,831] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T21:06:22.807771+00:00 [queued]>
+[2022-11-13 21:11:37,833] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:11:37,836] {taskinstance.py:1377} INFO - Starting attempt 2 of 2
+[2022-11-13 21:11:37,843] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:11:37,870] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-11-13 21:06:22.807771+00:00
+[2022-11-13 21:11:37,885] {standard_task_runner.py:52} INFO - Started process 776 to run task
+[2022-11-13 21:11:37,911] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'manual__2022-11-13T21:06:22.807771+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpv74cvs3x', '--error-file', '/tmp/tmpjffwfyb0']
+[2022-11-13 21:11:37,915] {standard_task_runner.py:80} INFO - Job 12: Subtask run-webscraper-two_lincoln
+[2022-11-13 21:11:38,071] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T21:06:22.807771+00:00 [running]> on host c943e7c407a4
+[2022-11-13 21:11:38,299] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-13T21:06:22.807771+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-13T21:06:22.807771+00:00
+[2022-11-13 21:11:38,366] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 21:11:38,408] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 21:11:41,876] {docker.py:310} INFO - TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+[2022-11-13 21:11:41,881] {docker.py:310} INFO - Traceback (most recent call last):
+[2022-11-13 21:11:41,884] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+[2022-11-13 21:11:41,888] {docker.py:310} INFO - httplib_response = self._make_request(
+[2022-11-13 21:11:41,892] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+[2022-11-13 21:11:41,898] {docker.py:310} INFO - six.raise_from(e, None)
+[2022-11-13 21:11:41,902] {docker.py:310} INFO - File "<string>", line 3, in raise_from
+[2022-11-13 21:11:41,910] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+[2022-11-13 21:11:41,920] {docker.py:310} INFO - response.begin()
+[2022-11-13 21:11:41,924] {docker.py:310} INFO - File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+[2022-11-13 21:11:41,929] {docker.py:310} INFO - version, status, reason = self._read_status()
+[2022-11-13 21:11:41,931] {docker.py:310} INFO - File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+[2022-11-13 21:11:41,938] {docker.py:310} INFO - raise RemoteDisconnected("Remote end closed connection without"
+[2022-11-13 21:11:41,943] {docker.py:310} INFO - http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/main.py", line 120, in <module>
+[2022-11-13 21:11:41,952] {docker.py:310} INFO - action_class.run()
+[2022-11-13 21:11:41,957] {docker.py:310} INFO - File "/app/main.py", line 42, in run
+[2022-11-13 21:11:41,961] {docker.py:310} INFO - self.connect()
+[2022-11-13 21:11:41,964] {docker.py:310} INFO - File "/app/main.py", line 26, in connect
+[2022-11-13 21:11:41,966] {docker.py:310} INFO - self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+[2022-11-13 21:11:41,971] {docker.py:310} INFO - self.start_session(capabilities, browser_profile)
+[2022-11-13 21:11:41,974] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+[2022-11-13 21:11:41,977] {docker.py:310} INFO - response = self.execute(Command.NEW_SESSION, parameters)
+[2022-11-13 21:11:41,980] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 427, in execute
+[2022-11-13 21:11:41,982] {docker.py:310} INFO - response = self.command_executor.execute(driver_command, params)
+[2022-11-13 21:11:41,988] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 344, in execute
+[2022-11-13 21:11:41,990] {docker.py:310} INFO - return self._request(command_info[0], url, body=data)
+[2022-11-13 21:11:41,993] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 366, in _request
+[2022-11-13 21:11:42,005] {docker.py:310} INFO - response = self._conn.request(method, url, body=body, headers=headers)
+[2022-11-13 21:11:42,010] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+[2022-11-13 21:11:42,016] {docker.py:310} INFO - return self.request_encode_body(
+[2022-11-13 21:11:42,019] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+[2022-11-13 21:11:42,029] {docker.py:310} INFO - return self.urlopen(method, url, **extra_kw)
+[2022-11-13 21:11:42,034] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+[2022-11-13 21:11:42,042] {docker.py:310} INFO - response = conn.urlopen(method, u.request_uri, **kw)
+[2022-11-13 21:11:42,046] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+[2022-11-13 21:11:42,053] {docker.py:310} INFO - retries = retries.increment(
+[2022-11-13 21:11:42,057] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+[2022-11-13 21:11:42,069] {docker.py:310} INFO - raise six.reraise(type(error), error, _stacktrace)
+[2022-11-13 21:11:42,073] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/packages/six.py", line 769, in reraise
+[2022-11-13 21:11:42,088] {docker.py:310} INFO - raise value.with_traceback(tb)
+[2022-11-13 21:11:42,091] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+[2022-11-13 21:11:42,095] {docker.py:310} INFO - httplib_response = self._make_request(
+[2022-11-13 21:11:42,097] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+[2022-11-13 21:11:42,102] {docker.py:310} INFO - six.raise_from(e, None)
+[2022-11-13 21:11:42,105] {docker.py:310} INFO - File "<string>", line 3, in raise_from
+[2022-11-13 21:11:42,109] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+[2022-11-13 21:11:42,112] {docker.py:310} INFO - httplib_response = conn.getresponse()
+[2022-11-13 21:11:42,114] {docker.py:310} INFO - File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+[2022-11-13 21:11:42,125] {docker.py:310} INFO - response.begin()
+[2022-11-13 21:11:42,130] {docker.py:310} INFO - File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+[2022-11-13 21:11:42,135] {docker.py:310} INFO - version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+[2022-11-13 21:11:42,138] {docker.py:310} INFO - raise RemoteDisconnected("Remote end closed connection without"
+[2022-11-13 21:11:42,142] {docker.py:310} INFO - urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-11-13 21:11:42,586] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp2uhunf4i")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 315, in _run_image_with_mounts
+    raise AirflowException(f'Docker container failed: {repr(result)} lines {joined_log_lines}')
+airflow.exceptions.AirflowException: Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+httplib_response = self._make_request(
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+six.raise_from(e, None)
+File "<string>", line 3, in raise_from
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+response.begin()
+File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+version, status, reason = self._read_status()
+File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/main.py", line 120, in <module>
+action_class.run()
+File "/app/main.py", line 42, in run
+self.connect()
+File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 427, in execute
+response = self.command_executor.execute(driver_command, params)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 344, in execute
+return self._request(command_info[0], url, body=data)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 366, in _request
+response = self._conn.request(method, url, body=body, headers=headers)
+File "/usr/local/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+return self.request_encode_body(
+File "/usr/local/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+return self.urlopen(method, url, **extra_kw)
+File "/usr/local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+response = conn.urlopen(method, u.request_uri, **kw)
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+retries = retries.increment(
+File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+raise six.reraise(type(error), error, _stacktrace)
+File "/usr/local/lib/python3.10/site-packages/urllib3/packages/six.py", line 769, in reraise
+raise value.with_traceback(tb)
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+httplib_response = self._make_request(
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+six.raise_from(e, None)
+File "<string>", line 3, in raise_from
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+httplib_response = conn.getresponse()
+File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+response.begin()
+File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-11-13 21:11:42,598] {taskinstance.py:1415} INFO - Marking task as FAILED. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20221113T210622, start_date=20221113T211137, end_date=20221113T211142
+[2022-11-13 21:11:42,636] {standard_task_runner.py:92} ERROR - Failed to execute job 12 for task run-webscraper-two_lincoln (Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+httplib_response = self._make_request(
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+six.raise_from(e, None)
+File "<string>", line 3, in raise_from
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+response.begin()
+File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+version, status, reason = self._read_status()
+File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/main.py", line 120, in <module>
+action_class.run()
+File "/app/main.py", line 42, in run
+self.connect()
+File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 427, in execute
+response = self.command_executor.execute(driver_command, params)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 344, in execute
+return self._request(command_info[0], url, body=data)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 366, in _request
+response = self._conn.request(method, url, body=body, headers=headers)
+File "/usr/local/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+return self.request_encode_body(
+File "/usr/local/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+return self.urlopen(method, url, **extra_kw)
+File "/usr/local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+response = conn.urlopen(method, u.request_uri, **kw)
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+retries = retries.increment(
+File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+raise six.reraise(type(error), error, _stacktrace)
+File "/usr/local/lib/python3.10/site-packages/urllib3/packages/six.py", line 769, in reraise
+raise value.with_traceback(tb)
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+httplib_response = self._make_request(
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+six.raise_from(e, None)
+File "<string>", line 3, in raise_from
+File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+httplib_response = conn.getresponse()
+File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+response.begin()
+File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.10/http/client.py", line 287, in _read_status
+raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')); 776)
+[2022-11-13 21:11:42,682] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 21:11:42,764] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

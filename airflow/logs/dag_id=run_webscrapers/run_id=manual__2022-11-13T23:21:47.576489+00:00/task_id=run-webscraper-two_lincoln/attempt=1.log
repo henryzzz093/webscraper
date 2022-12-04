@@ -1,0 +1,46 @@
+[2022-11-13 23:21:49,004] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T23:21:47.576489+00:00 [queued]>
+[2022-11-13 23:21:49,020] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T23:21:47.576489+00:00 [queued]>
+[2022-11-13 23:21:49,023] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 23:21:49,027] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 23:21:49,029] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 23:21:49,038] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-11-13 23:21:47.576489+00:00
+[2022-11-13 23:21:49,047] {standard_task_runner.py:52} INFO - Started process 4809 to run task
+[2022-11-13 23:21:49,051] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'manual__2022-11-13T23:21:47.576489+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmp0xw32ko3', '--error-file', '/tmp/tmpvdpa9d4h']
+[2022-11-13 23:21:49,055] {standard_task_runner.py:80} INFO - Job 5: Subtask run-webscraper-two_lincoln
+[2022-11-13 23:21:49,197] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln manual__2022-11-13T23:21:47.576489+00:00 [running]> on host b2897896724f
+[2022-11-13 23:21:49,312] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-13T23:21:47.576489+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-13T23:21:47.576489+00:00
+[2022-11-13 23:21:49,481] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 23:21:49,519] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 23:22:19,930] {docker.py:310} INFO - TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+{'company': 'Two Lincoln', 'floorplan': '1 BED 1 BATH', 'available': '(1 Available)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1', 'size': 'Sq.Ft. 893', 'rent': 'Rent $4,850', 'deposit': 'Deposit $1,000'}
+{'id': 146, 'created_at': '2022-11-13T15:21:58.914266-08:00', 'updated_at': '2022-11-13T15:21:58.914426-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 1 BATH', 'available': '(1 Available)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1', 'size': 'Sq.Ft. 893', 'deposit': 'Deposit $1,000', 'rent': 'Rent $4,850'}
+{'company': 'Two Lincoln', 'floorplan': '1 BED 1.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 1,283', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $1,000'}
+{'id': 147, 'created_at': '2022-11-13T15:22:00.282362-08:00', 'updated_at': '2022-11-13T15:22:00.282404-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 1.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 1,283', 'deposit': 'Deposit $1,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '2 BED 2.5 BATH', 'available': '(4 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,418 -', 'rent': 'to', 'deposit': '1,731'}
+{'id': 148, 'created_at': '2022-11-13T15:22:01.507406-08:00', 'updated_at': '2022-11-13T15:22:01.507447-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '2 BED 2.5 BATH', 'available': '(4 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,418 -', 'deposit': '1,731', 'rent': 'to'}
+{'company': 'Two Lincoln', 'floorplan': '2 BED 2.5 BATH WITH DEN', 'available': '(2 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,908', 'rent': 'Rent $11,450 -', 'deposit': 'to'}
+{'id': 149, 'created_at': '2022-11-13T15:22:02.717564-08:00', 'updated_at': '2022-11-13T15:22:02.717623-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '2 BED 2.5 BATH WITH DEN', 'available': '(2 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,908', 'deposit': 'to', 'rent': 'Rent $11,450 -'}
+{'company': 'Two Lincoln', 'floorplan': '3 BED 3.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,327', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $5,000'}
+{'id': 150, 'created_at': '2022-11-13T15:22:03.897543-08:00', 'updated_at': '2022-11-13T15:22:03.897639-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '3 BED 3.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,327', 'deposit': 'Deposit $5,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '3 BED 3.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,867', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $5,000'}
+{'id': 151, 'created_at': '2022-11-13T15:22:05.418948-08:00', 'updated_at': '2022-11-13T15:22:05.419015-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '3 BED 3.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,867', 'deposit': 'Deposit $5,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '3 BED 3.5 BATH PENTHOUSE', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 3,730', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $5,000'}
+{'id': 155, 'created_at': '2022-11-13T15:22:11.604101-08:00', 'updated_at': '2022-11-13T15:22:11.604248-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '3 BED 3.5 BATH PENTHOUSE', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 3,730', 'deposit': 'Deposit $5,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '1 BED 1.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 912', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $1,000'}
+{'id': 156, 'created_at': '2022-11-13T15:22:12.756819-08:00', 'updated_at': '2022-11-13T15:22:12.756850-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 1.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 912', 'deposit': 'Deposit $1,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '1 BED 2.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 2,089', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $2,500'}
+{'id': 158, 'created_at': '2022-11-13T15:22:18.910701-08:00', 'updated_at': '2022-11-13T15:22:18.910772-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 2.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 2,089', 'deposit': 'Deposit $2,500', 'rent': 'Rent Call for Details'}
+Scraping job completed!
+[2022-11-13 23:22:20,578] {taskinstance.py:1415} INFO - Marking task as SUCCESS. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20221113T232147, start_date=20221113T232149, end_date=20221113T232220
+[2022-11-13 23:22:20,700] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-13 23:22:20,767] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

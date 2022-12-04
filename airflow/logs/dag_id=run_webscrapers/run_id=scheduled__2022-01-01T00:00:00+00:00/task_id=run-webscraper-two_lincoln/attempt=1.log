@@ -1,0 +1,868 @@
+[2022-11-13 20:19:37,394] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:19:37,400] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:19:37,402] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:19:37,403] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:19:37,403] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:19:37,410] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:19:37,416] {standard_task_runner.py:52} INFO - Started process 412 to run task
+[2022-11-13 20:19:37,426] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpgn1qwvjc', '--error-file', '/tmp/tmpajby43u8']
+[2022-11-13 20:19:37,430] {standard_task_runner.py:80} INFO - Job 4: Subtask run-webscraper-two_lincoln
+[2022-11-13 20:19:37,554] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [running]> on host 113eb9d218de
+[2022-11-13 20:19:37,646] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:19:37,721] {docker.py:373} INFO - Pulling docker image domogordon/development:latest
+[2022-11-13 20:19:39,702] {docker.py:387} INFO - latest: Pulling from domogordon/development
+[2022-11-13 20:19:39,704] {docker.py:387} INFO - 4500a762c546: Pulling fs layer
+[2022-11-13 20:19:39,705] {docker.py:387} INFO - eaa89787764f: Pulling fs layer
+[2022-11-13 20:19:39,707] {docker.py:387} INFO - 4e88666679d8: Pulling fs layer
+[2022-11-13 20:19:39,708] {docker.py:387} INFO - 2f0bd190e5e6: Pulling fs layer
+[2022-11-13 20:19:39,710] {docker.py:387} INFO - b9fbf95118ac: Pulling fs layer
+[2022-11-13 20:19:39,712] {docker.py:387} INFO - b3c984ccd411: Pulling fs layer
+[2022-11-13 20:19:39,713] {docker.py:387} INFO - 510749d384e9: Pulling fs layer
+[2022-11-13 20:19:39,714] {docker.py:387} INFO - 0c3edb417191: Pulling fs layer
+[2022-11-13 20:19:39,716] {docker.py:387} INFO - b153da71e684: Pulling fs layer
+[2022-11-13 20:19:39,717] {docker.py:387} INFO - b153da71e684: Waiting
+[2022-11-13 20:19:39,718] {docker.py:387} INFO - 2f0bd190e5e6: Waiting
+[2022-11-13 20:19:39,719] {docker.py:387} INFO - b3c984ccd411: Waiting
+[2022-11-13 20:19:39,722] {docker.py:387} INFO - b9fbf95118ac: Waiting
+[2022-11-13 20:19:39,724] {docker.py:387} INFO - 510749d384e9: Waiting
+[2022-11-13 20:19:39,726] {docker.py:387} INFO - 0c3edb417191: Waiting
+[2022-11-13 20:19:39,752] {docker.py:387} INFO - eaa89787764f: Downloading
+[2022-11-13 20:19:39,769] {docker.py:387} INFO - 4500a762c546: Downloading
+[2022-11-13 20:19:39,847] {docker.py:387} INFO - 4e88666679d8: Downloading
+[2022-11-13 20:19:39,921] {docker.py:387} INFO - eaa89787764f: Verifying Checksum
+[2022-11-13 20:19:39,925] {docker.py:387} INFO - eaa89787764f: Download complete
+[2022-11-13 20:19:40,190] {docker.py:387} INFO - 4e88666679d8: Verifying Checksum
+[2022-11-13 20:19:40,192] {docker.py:387} INFO - 4e88666679d8: Download complete
+[2022-11-13 20:19:40,463] {docker.py:387} INFO - 2f0bd190e5e6: Downloading
+[2022-11-13 20:19:40,470] {docker.py:387} INFO - 2f0bd190e5e6: Verifying Checksum
+[2022-11-13 20:19:40,478] {docker.py:387} INFO - 2f0bd190e5e6: Download complete
+[2022-11-13 20:19:40,718] {docker.py:387} INFO - b9fbf95118ac: Downloading
+[2022-11-13 20:19:40,974] {docker.py:387} INFO - b9fbf95118ac: Verifying Checksum
+[2022-11-13 20:19:40,978] {docker.py:387} INFO - b9fbf95118ac: Download complete
+[2022-11-13 20:19:41,007] {docker.py:387} INFO - 4500a762c546: Download complete
+[2022-11-13 20:19:41,124] {docker.py:387} INFO - b3c984ccd411: Downloading
+[2022-11-13 20:19:41,127] {docker.py:387} INFO - b3c984ccd411: Verifying Checksum
+[2022-11-13 20:19:41,128] {docker.py:387} INFO - b3c984ccd411: Download complete
+[2022-11-13 20:19:41,169] {docker.py:387} INFO - 4500a762c546: Extracting
+[2022-11-13 20:19:41,541] {docker.py:387} INFO - 510749d384e9: Downloading
+[2022-11-13 20:19:41,543] {docker.py:387} INFO - 510749d384e9: Verifying Checksum
+[2022-11-13 20:19:41,544] {docker.py:387} INFO - 510749d384e9: Download complete
+[2022-11-13 20:19:41,569] {docker.py:387} INFO - b153da71e684: Downloading
+[2022-11-13 20:19:41,611] {docker.py:387} INFO - b153da71e684: Download complete
+[2022-11-13 20:19:41,701] {docker.py:387} INFO - 0c3edb417191: Downloading
+[2022-11-13 20:19:42,030] {docker.py:387} INFO - 0c3edb417191: Verifying Checksum
+[2022-11-13 20:19:42,033] {docker.py:387} INFO - 0c3edb417191: Download complete
+[2022-11-13 20:19:42,519] {docker.py:387} INFO - 4500a762c546: Pull complete
+[2022-11-13 20:19:42,523] {docker.py:387} INFO - eaa89787764f: Extracting
+[2022-11-13 20:19:42,658] {docker.py:387} INFO - eaa89787764f: Pull complete
+[2022-11-13 20:19:42,696] {docker.py:387} INFO - 4e88666679d8: Extracting
+[2022-11-13 20:19:43,037] {docker.py:387} INFO - 4e88666679d8: Pull complete
+[2022-11-13 20:19:43,040] {docker.py:387} INFO - 2f0bd190e5e6: Extracting
+[2022-11-13 20:19:43,079] {docker.py:387} INFO - 2f0bd190e5e6: Pull complete
+[2022-11-13 20:19:43,113] {docker.py:387} INFO - b9fbf95118ac: Extracting
+[2022-11-13 20:19:43,268] {docker.py:387} INFO - b9fbf95118ac: Pull complete
+[2022-11-13 20:19:43,272] {docker.py:387} INFO - b3c984ccd411: Extracting
+[2022-11-13 20:19:43,312] {docker.py:387} INFO - b3c984ccd411: Pull complete
+[2022-11-13 20:19:43,323] {docker.py:387} INFO - 510749d384e9: Extracting
+[2022-11-13 20:19:43,358] {docker.py:387} INFO - 510749d384e9: Pull complete
+[2022-11-13 20:19:43,364] {docker.py:387} INFO - 0c3edb417191: Extracting
+[2022-11-13 20:19:43,757] {docker.py:387} INFO - 0c3edb417191: Pull complete
+[2022-11-13 20:19:43,760] {docker.py:387} INFO - b153da71e684: Extracting
+[2022-11-13 20:19:43,799] {docker.py:387} INFO - b153da71e684: Pull complete
+[2022-11-13 20:19:43,806] {docker.py:382} INFO - Digest: sha256:00234ffef837f01c62b6135a9a5560ea7050f9e1941ef80162f5daacb623581c
+[2022-11-13 20:19:43,810] {docker.py:382} INFO - Status: Downloaded newer image for domogordon/development:latest
+[2022-11-13 20:19:43,813] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:19:43,875] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:20:00,726] {docker.py:310} INFO - TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+[2022-11-13 20:20:00,734] {docker.py:310} INFO - Traceback (most recent call last):
+[2022-11-13 20:20:00,738] {docker.py:310} INFO - File "/app/main.py", line 120, in <module>
+[2022-11-13 20:20:00,742] {docker.py:310} INFO - action_class.run()
+  File "/app/main.py", line 42, in run
+[2022-11-13 20:20:00,746] {docker.py:310} INFO - self.connect()
+[2022-11-13 20:20:00,751] {docker.py:310} INFO - File "/app/main.py", line 26, in connect
+[2022-11-13 20:20:00,754] {docker.py:310} INFO - self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+[2022-11-13 20:20:00,756] {docker.py:310} INFO - self.start_session(capabilities, browser_profile)
+[2022-11-13 20:20:00,757] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+[2022-11-13 20:20:00,761] {docker.py:310} INFO - response = self.execute(Command.NEW_SESSION, parameters)
+[2022-11-13 20:20:00,768] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2022-11-13 20:20:00,770] {docker.py:310} INFO - self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+[2022-11-13 20:20:00,774] {docker.py:310} INFO - raise exception_class(message, screen, stacktrace)
+[2022-11-13 20:20:00,776] {docker.py:310} INFO - selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'cdfe698fe0f4', ip: '172.20.0.7'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 20:20:01,202] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp_oe68xoa")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 315, in _run_image_with_mounts
+    raise AirflowException(f'Docker container failed: {repr(result)} lines {joined_log_lines}')
+airflow.exceptions.AirflowException: Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+self.connect()
+File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'cdfe698fe0f4', ip: '172.20.0.7'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 20:20:01,223] {taskinstance.py:1415} INFO - Marking task as UP_FOR_RETRY. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20220101T000000, start_date=20221113T201937, end_date=20221113T202001
+[2022-11-13 20:20:01,252] {standard_task_runner.py:92} ERROR - Failed to execute job 4 for task run-webscraper-two_lincoln (Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+self.connect()
+File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'cdfe698fe0f4', ip: '172.20.0.7'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829); 412)
+[2022-11-13 20:20:01,340] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 20:20:01,389] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-11-13 20:42:21,202] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:42:21,228] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:42:21,234] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:42:21,238] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:42:21,245] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:42:21,267] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:42:21,281] {standard_task_runner.py:52} INFO - Started process 235 to run task
+[2022-11-13 20:42:21,297] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpkd6trj6x', '--error-file', '/tmp/tmpcdt60l_n']
+[2022-11-13 20:42:21,301] {standard_task_runner.py:80} INFO - Job 3: Subtask run-webscraper-two_lincoln
+[2022-11-13 20:42:21,429] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [running]> on host f3befed808ff
+[2022-11-13 20:42:21,545] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:42:21,621] {docker.py:373} INFO - Pulling docker image domogordon/development:latest
+[2022-11-13 20:42:23,145] {docker.py:387} INFO - latest: Pulling from domogordon/development
+[2022-11-13 20:42:23,154] {docker.py:387} INFO - 4500a762c546: Pulling fs layer
+[2022-11-13 20:42:23,160] {docker.py:387} INFO - eaa89787764f: Pulling fs layer
+[2022-11-13 20:42:23,164] {docker.py:387} INFO - 4e88666679d8: Pulling fs layer
+[2022-11-13 20:42:23,170] {docker.py:387} INFO - 2f0bd190e5e6: Pulling fs layer
+[2022-11-13 20:42:23,180] {docker.py:387} INFO - b9fbf95118ac: Pulling fs layer
+[2022-11-13 20:42:23,188] {docker.py:387} INFO - b3c984ccd411: Pulling fs layer
+[2022-11-13 20:42:23,194] {docker.py:387} INFO - 510749d384e9: Pulling fs layer
+[2022-11-13 20:42:23,198] {docker.py:387} INFO - 0c3edb417191: Pulling fs layer
+[2022-11-13 20:42:23,205] {docker.py:387} INFO - b153da71e684: Pulling fs layer
+[2022-11-13 20:42:23,214] {docker.py:387} INFO - b3c984ccd411: Waiting
+[2022-11-13 20:42:23,222] {docker.py:387} INFO - 510749d384e9: Waiting
+[2022-11-13 20:42:23,231] {docker.py:387} INFO - 0c3edb417191: Waiting
+[2022-11-13 20:42:23,242] {docker.py:387} INFO - b153da71e684: Waiting
+[2022-11-13 20:42:23,246] {docker.py:387} INFO - 2f0bd190e5e6: Waiting
+[2022-11-13 20:42:23,254] {docker.py:387} INFO - b9fbf95118ac: Waiting
+[2022-11-13 20:42:23,537] {docker.py:387} INFO - eaa89787764f: Downloading
+[2022-11-13 20:42:23,564] {docker.py:387} INFO - 4e88666679d8: Downloading
+[2022-11-13 20:42:23,598] {docker.py:387} INFO - 4500a762c546: Downloading
+[2022-11-13 20:42:23,729] {docker.py:387} INFO - eaa89787764f: Verifying Checksum
+[2022-11-13 20:42:23,744] {docker.py:387} INFO - eaa89787764f: Download complete
+[2022-11-13 20:42:24,282] {docker.py:387} INFO - 2f0bd190e5e6: Downloading
+[2022-11-13 20:42:24,288] {docker.py:387} INFO - 2f0bd190e5e6: Download complete
+[2022-11-13 20:42:24,722] {docker.py:387} INFO - b9fbf95118ac: Downloading
+[2022-11-13 20:42:24,960] {docker.py:387} INFO - b9fbf95118ac: Verifying Checksum
+[2022-11-13 20:42:24,961] {docker.py:387} INFO - b9fbf95118ac: Download complete
+[2022-11-13 20:42:25,440] {docker.py:387} INFO - b3c984ccd411: Downloading
+[2022-11-13 20:42:25,458] {docker.py:387} INFO - b3c984ccd411: Verifying Checksum
+[2022-11-13 20:42:25,466] {docker.py:387} INFO - b3c984ccd411: Download complete
+[2022-11-13 20:42:25,518] {docker.py:387} INFO - 4e88666679d8: Verifying Checksum
+[2022-11-13 20:42:25,533] {docker.py:387} INFO - 4e88666679d8: Download complete
+[2022-11-13 20:42:25,871] {docker.py:387} INFO - 510749d384e9: Download complete
+[2022-11-13 20:42:26,186] {docker.py:387} INFO - 0c3edb417191: Downloading
+[2022-11-13 20:42:26,383] {docker.py:387} INFO - b153da71e684: Downloading
+[2022-11-13 20:42:26,437] {docker.py:387} INFO - b153da71e684: Verifying Checksum
+[2022-11-13 20:42:26,454] {docker.py:387} INFO - b153da71e684: Download complete
+[2022-11-13 20:42:26,633] {docker.py:387} INFO - 0c3edb417191: Download complete
+[2022-11-13 20:42:26,982] {docker.py:387} INFO - 4500a762c546: Verifying Checksum
+[2022-11-13 20:42:27,006] {docker.py:387} INFO - 4500a762c546: Download complete
+[2022-11-13 20:42:27,331] {docker.py:387} INFO - 4500a762c546: Extracting
+[2022-11-13 20:42:29,196] {docker.py:387} INFO - 4500a762c546: Pull complete
+[2022-11-13 20:42:29,217] {docker.py:387} INFO - eaa89787764f: Extracting
+[2022-11-13 20:42:29,520] {docker.py:387} INFO - eaa89787764f: Pull complete
+[2022-11-13 20:42:29,627] {docker.py:387} INFO - 4e88666679d8: Extracting
+[2022-11-13 20:42:30,460] {docker.py:387} INFO - 4e88666679d8: Pull complete
+[2022-11-13 20:42:30,471] {docker.py:387} INFO - 2f0bd190e5e6: Extracting
+[2022-11-13 20:42:30,556] {docker.py:387} INFO - 2f0bd190e5e6: Pull complete
+[2022-11-13 20:42:30,656] {docker.py:387} INFO - b9fbf95118ac: Extracting
+[2022-11-13 20:42:30,969] {docker.py:387} INFO - b9fbf95118ac: Pull complete
+[2022-11-13 20:42:30,979] {docker.py:387} INFO - b3c984ccd411: Extracting
+[2022-11-13 20:42:31,093] {docker.py:387} INFO - b3c984ccd411: Pull complete
+[2022-11-13 20:42:31,105] {docker.py:387} INFO - 510749d384e9: Extracting
+[2022-11-13 20:42:31,204] {docker.py:387} INFO - 510749d384e9: Pull complete
+[2022-11-13 20:42:31,222] {docker.py:387} INFO - 0c3edb417191: Extracting
+[2022-11-13 20:42:31,872] {docker.py:387} INFO - 0c3edb417191: Pull complete
+[2022-11-13 20:42:31,881] {docker.py:387} INFO - b153da71e684: Extracting
+[2022-11-13 20:42:31,952] {docker.py:387} INFO - b153da71e684: Pull complete
+[2022-11-13 20:42:31,979] {docker.py:382} INFO - Digest: sha256:00234ffef837f01c62b6135a9a5560ea7050f9e1941ef80162f5daacb623581c
+[2022-11-13 20:42:31,995] {docker.py:382} INFO - Status: Downloaded newer image for domogordon/development:latest
+[2022-11-13 20:42:32,005] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:42:32,044] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:49:46,859] {local_task_job.py:220} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2022-11-13 20:49:46,865] {process_utils.py:125} INFO - Sending Signals.SIGTERM to group 235. PIDs of all processes in the group: [235]
+[2022-11-13 20:49:46,869] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 235
+[2022-11-13 20:49:46,873] {taskinstance.py:1561} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-11-13 20:49:46,877] {docker.py:416} INFO - Stopping docker container
+[2022-11-13 20:49:57,255] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmpufl492s_")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 307, in _run_image_with_mounts
+    for log_chunk in logstream:
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/types/daemon.py", line 32, in __next__
+    return next(self._stream)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 418, in <genexpr>
+    gen = (data for (_, data) in gen)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/socket.py", line 92, in frames_iter_no_tty
+    (stream, n) = next_frame_header(socket)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/socket.py", line 64, in next_frame_header
+    data = read_exactly(socket, 8)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/socket.py", line 49, in read_exactly
+    next_data = read(socket, n - len(data))
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/socket.py", line 29, in read
+    select.select([socket], [], [])
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1563, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-11-13 20:49:57,267] {taskinstance.py:1415} INFO - Marking task as FAILED. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20220101T000000, start_date=20221113T204221, end_date=20221113T204957
+[2022-11-13 20:49:57,295] {standard_task_runner.py:92} ERROR - Failed to execute job 3 for task run-webscraper-two_lincoln ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(run_webscrapers, run-webscraper-two_lincoln, scheduled__2022-01-01T00:00:00+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'run-webscraper-two_lincoln', 'dag_id': 'run_webscrapers', 'run_id': 'scheduled__2022-01-01T00:00:00+00:00', 'map_index': -1, 'start_date': datetime.datetime(2022, 11, 13, 20, 42, 21, 211181, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2022, 11, 13, 20, 49, 57, 266766, tzinfo=Timezone('UTC')), 'duration': 456}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 235)
+[2022-11-13 20:49:57,326] {process_utils.py:75} INFO - Process psutil.Process(pid=235, status='terminated', exitcode=1, started='20:42:20') (235) terminated with exit code 1
+[2022-11-13 20:50:23,679] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:50:23,712] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:50:23,716] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:50:23,722] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:50:23,727] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:50:23,747] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:50:23,759] {standard_task_runner.py:52} INFO - Started process 571 to run task
+[2022-11-13 20:50:23,765] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpvugz6djd', '--error-file', '/tmp/tmpwe6jnku8']
+[2022-11-13 20:50:23,775] {standard_task_runner.py:80} INFO - Job 6: Subtask run-webscraper-two_lincoln
+[2022-11-13 20:50:23,924] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [running]> on host f3befed808ff
+[2022-11-13 20:50:24,066] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:50:24,154] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:50:24,182] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:52:17,600] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp06xu3bc4")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff99d31d00>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/a2ddaa4709d3b42c813b9a3fe00abe5bbe856fbcf2651812fafa3938f22a714f/wait (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99d31d00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 312, in _run_image_with_mounts
+    result = self.cli.wait(self.container['Id'])
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 1303, in wait
+    res = self._post(url, timeout=timeout, params=params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 233, in _post
+    return self.post(url, **self._set_request_timeout(kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/a2ddaa4709d3b42c813b9a3fe00abe5bbe856fbcf2651812fafa3938f22a714f/wait (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99d31d00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff99cef400>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/a2ddaa4709d3b42c813b9a3fe00abe5bbe856fbcf2651812fafa3938f22a714f?v=False&link=False&force=False (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cef400>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 338, in _run_image_with_mounts
+    self.cli.remove_container(self.container['Id'])
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 1007, in remove_container
+    res = self._delete(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 245, in _delete
+    return self.delete(url, **self._set_request_timeout(kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 669, in delete
+    return self.request("DELETE", url, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/a2ddaa4709d3b42c813b9a3fe00abe5bbe856fbcf2651812fafa3938f22a714f?v=False&link=False&force=False (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cef400>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2022-11-13 20:52:17,842] {taskinstance.py:1415} INFO - Marking task as UP_FOR_RETRY. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20220101T000000, start_date=20221113T205023, end_date=20221113T205217
+[2022-11-13 20:52:17,921] {standard_task_runner.py:92} ERROR - Failed to execute job 6 for task run-webscraper-two_lincoln (HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/a2ddaa4709d3b42c813b9a3fe00abe5bbe856fbcf2651812fafa3938f22a714f?v=False&link=False&force=False (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cef400>: Failed to establish a new connection: [Errno 111] Connection refused')); 571)
+[2022-11-13 20:52:18,097] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 20:52:18,358] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-11-13 20:55:36,960] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:55:36,967] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:55:36,970] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:55:36,971] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:55:36,973] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:55:36,980] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:55:36,986] {standard_task_runner.py:52} INFO - Started process 71 to run task
+[2022-11-13 20:55:36,990] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmp8rgu3p7d', '--error-file', '/tmp/tmpy9v6jus5']
+[2022-11-13 20:55:36,992] {standard_task_runner.py:80} INFO - Job 3: Subtask run-webscraper-two_lincoln
+[2022-11-13 20:55:37,073] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [running]> on host c943e7c407a4
+[2022-11-13 20:55:37,170] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:55:37,241] {docker.py:373} INFO - Pulling docker image domogordon/development:latest
+[2022-11-13 20:55:39,033] {docker.py:387} INFO - latest: Pulling from domogordon/development
+[2022-11-13 20:55:39,036] {docker.py:387} INFO - 4500a762c546: Pulling fs layer
+[2022-11-13 20:55:39,037] {docker.py:387} INFO - eaa89787764f: Pulling fs layer
+[2022-11-13 20:55:39,039] {docker.py:387} INFO - 4e88666679d8: Pulling fs layer
+[2022-11-13 20:55:39,039] {docker.py:387} INFO - 2f0bd190e5e6: Pulling fs layer
+[2022-11-13 20:55:39,040] {docker.py:387} INFO - b9fbf95118ac: Pulling fs layer
+[2022-11-13 20:55:39,042] {docker.py:387} INFO - b3c984ccd411: Pulling fs layer
+[2022-11-13 20:55:39,042] {docker.py:387} INFO - 510749d384e9: Pulling fs layer
+[2022-11-13 20:55:39,043] {docker.py:387} INFO - 0c3edb417191: Pulling fs layer
+[2022-11-13 20:55:39,044] {docker.py:387} INFO - b153da71e684: Pulling fs layer
+[2022-11-13 20:55:39,045] {docker.py:387} INFO - b3c984ccd411: Waiting
+[2022-11-13 20:55:39,046] {docker.py:387} INFO - 510749d384e9: Waiting
+[2022-11-13 20:55:39,046] {docker.py:387} INFO - 0c3edb417191: Waiting
+[2022-11-13 20:55:39,047] {docker.py:387} INFO - b153da71e684: Waiting
+[2022-11-13 20:55:39,048] {docker.py:387} INFO - 2f0bd190e5e6: Waiting
+[2022-11-13 20:55:39,048] {docker.py:387} INFO - b9fbf95118ac: Waiting
+[2022-11-13 20:55:39,435] {docker.py:387} INFO - eaa89787764f: Downloading
+[2022-11-13 20:55:39,455] {docker.py:387} INFO - 4e88666679d8: Downloading
+[2022-11-13 20:55:39,458] {docker.py:387} INFO - 4500a762c546: Downloading
+[2022-11-13 20:55:39,622] {docker.py:387} INFO - eaa89787764f: Verifying Checksum
+[2022-11-13 20:55:39,630] {docker.py:387} INFO - eaa89787764f: Download complete
+[2022-11-13 20:55:40,125] {docker.py:387} INFO - 2f0bd190e5e6: Downloading
+[2022-11-13 20:55:40,130] {docker.py:387} INFO - 2f0bd190e5e6: Verifying Checksum
+[2022-11-13 20:55:40,137] {docker.py:387} INFO - 2f0bd190e5e6: Download complete
+[2022-11-13 20:55:40,144] {docker.py:387} INFO - 4500a762c546: Verifying Checksum
+[2022-11-13 20:55:40,152] {docker.py:387} INFO - 4500a762c546: Download complete
+[2022-11-13 20:55:40,218] {docker.py:387} INFO - 4500a762c546: Extracting
+[2022-11-13 20:55:40,223] {docker.py:387} INFO - 4e88666679d8: Verifying Checksum
+[2022-11-13 20:55:40,225] {docker.py:387} INFO - 4e88666679d8: Download complete
+[2022-11-13 20:55:40,515] {docker.py:387} INFO - b3c984ccd411: Download complete
+[2022-11-13 20:55:40,545] {docker.py:387} INFO - b9fbf95118ac: Downloading
+[2022-11-13 20:55:40,691] {docker.py:387} INFO - b9fbf95118ac: Verifying Checksum
+[2022-11-13 20:55:40,693] {docker.py:387} INFO - b9fbf95118ac: Download complete
+[2022-11-13 20:55:40,714] {docker.py:387} INFO - 510749d384e9: Download complete
+[2022-11-13 20:55:41,000] {docker.py:387} INFO - 0c3edb417191: Downloading
+[2022-11-13 20:55:41,078] {docker.py:387} INFO - b153da71e684: Downloading
+[2022-11-13 20:55:41,121] {docker.py:387} INFO - b153da71e684: Verifying Checksum
+[2022-11-13 20:55:41,124] {docker.py:387} INFO - b153da71e684: Download complete
+[2022-11-13 20:55:41,358] {docker.py:387} INFO - 0c3edb417191: Verifying Checksum
+[2022-11-13 20:55:41,361] {docker.py:387} INFO - 0c3edb417191: Download complete
+[2022-11-13 20:55:41,568] {docker.py:387} INFO - 4500a762c546: Pull complete
+[2022-11-13 20:55:41,573] {docker.py:387} INFO - eaa89787764f: Extracting
+[2022-11-13 20:55:41,736] {docker.py:387} INFO - eaa89787764f: Pull complete
+[2022-11-13 20:55:41,776] {docker.py:387} INFO - 4e88666679d8: Extracting
+[2022-11-13 20:55:42,363] {docker.py:387} INFO - 4e88666679d8: Pull complete
+[2022-11-13 20:55:42,376] {docker.py:387} INFO - 2f0bd190e5e6: Extracting
+[2022-11-13 20:55:42,523] {docker.py:387} INFO - 2f0bd190e5e6: Pull complete
+[2022-11-13 20:55:42,605] {docker.py:387} INFO - b9fbf95118ac: Extracting
+[2022-11-13 20:55:42,857] {docker.py:387} INFO - b9fbf95118ac: Pull complete
+[2022-11-13 20:55:42,864] {docker.py:387} INFO - b3c984ccd411: Extracting
+[2022-11-13 20:55:42,916] {docker.py:387} INFO - b3c984ccd411: Pull complete
+[2022-11-13 20:55:42,922] {docker.py:387} INFO - 510749d384e9: Extracting
+[2022-11-13 20:55:42,969] {docker.py:387} INFO - 510749d384e9: Pull complete
+[2022-11-13 20:55:42,978] {docker.py:387} INFO - 0c3edb417191: Extracting
+[2022-11-13 20:55:43,475] {docker.py:387} INFO - 0c3edb417191: Pull complete
+[2022-11-13 20:55:43,479] {docker.py:387} INFO - b153da71e684: Extracting
+[2022-11-13 20:55:43,532] {docker.py:387} INFO - b153da71e684: Pull complete
+[2022-11-13 20:55:43,559] {docker.py:382} INFO - Digest: sha256:00234ffef837f01c62b6135a9a5560ea7050f9e1941ef80162f5daacb623581c
+[2022-11-13 20:55:43,565] {docker.py:382} INFO - Status: Image is up to date for domogordon/development:latest
+[2022-11-13 20:55:43,578] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:55:43,627] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:55:59,662] {docker.py:310} INFO - TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+[2022-11-13 20:55:59,672] {docker.py:310} INFO - Traceback (most recent call last):
+[2022-11-13 20:55:59,680] {docker.py:310} INFO - File "/app/main.py", line 120, in <module>
+[2022-11-13 20:55:59,684] {docker.py:310} INFO - action_class.run()
+  File "/app/main.py", line 42, in run
+[2022-11-13 20:55:59,688] {docker.py:310} INFO - self.connect()
+  File "/app/main.py", line 26, in connect
+[2022-11-13 20:55:59,692] {docker.py:310} INFO - self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+[2022-11-13 20:55:59,697] {docker.py:310} INFO - self.start_session(capabilities, browser_profile)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+[2022-11-13 20:55:59,702] {docker.py:310} INFO - response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2022-11-13 20:55:59,706] {docker.py:310} INFO - self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+[2022-11-13 20:55:59,711] {docker.py:310} INFO - raise exception_class(message, screen, stacktrace)
+[2022-11-13 20:55:59,719] {docker.py:310} INFO - selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 20:56:00,209] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp0cw1_p9d")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 315, in _run_image_with_mounts
+    raise AirflowException(f'Docker container failed: {repr(result)} lines {joined_log_lines}')
+airflow.exceptions.AirflowException: Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+self.connect()
+  File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 20:56:00,245] {taskinstance.py:1415} INFO - Marking task as UP_FOR_RETRY. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20220101T000000, start_date=20221113T205536, end_date=20221113T205600
+[2022-11-13 20:56:00,310] {standard_task_runner.py:92} ERROR - Failed to execute job 3 for task run-webscraper-two_lincoln (Docker container failed: {'Error': None, 'StatusCode': 1} lines TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+self.connect()
+  File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829); 71)
+[2022-11-13 20:56:00,365] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 20:56:00,426] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-11-13 21:33:44,964] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 21:33:44,977] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 21:33:44,981] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:33:44,982] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 21:33:44,985] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:33:44,999] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-two_lincoln> on 2022-01-01 00:00:00+00:00
+[2022-11-13 21:33:45,008] {standard_task_runner.py:52} INFO - Started process 120 to run task
+[2022-11-13 21:33:45,012] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-two_lincoln', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpyodfp31t', '--error-file', '/tmp/tmpog47dlb_']
+[2022-11-13 21:33:45,016] {standard_task_runner.py:80} INFO - Job 3: Subtask run-webscraper-two_lincoln
+[2022-11-13 21:33:45,114] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-two_lincoln scheduled__2022-01-01T00:00:00+00:00 [running]> on host b2897896724f
+[2022-11-13 21:33:45,176] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-two_lincoln
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 21:33:45,259] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 21:33:45,285] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 21:34:12,214] {docker.py:310} INFO - TWO_LINCOLN
+Running Webscraper!
+Scraping: https://www.liveattwolincolntower.com/floorplans.aspx
+{'company': 'Two Lincoln', 'floorplan': '1 BED 1 BATH', 'available': '(1 Available)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1', 'size': 'Sq.Ft. 893', 'rent': 'Rent $4,850', 'deposit': 'Deposit $1,000'}
+{'id': 1, 'created_at': '2022-11-13T13:33:51.523543-08:00', 'updated_at': '2022-11-13T13:33:51.523615-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 1 BATH', 'available': '(1 Available)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1', 'size': 'Sq.Ft. 893', 'deposit': 'Deposit $1,000', 'rent': 'Rent $4,850'}
+{'company': 'Two Lincoln', 'floorplan': '1 BED 1.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 1,283', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $1,000'}
+{'id': 2, 'created_at': '2022-11-13T13:33:52.742706-08:00', 'updated_at': '2022-11-13T13:33:52.742738-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 1.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 1,283', 'deposit': 'Deposit $1,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '2 BED 2.5 BATH', 'available': '(4 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,418 -', 'rent': 'to', 'deposit': '1,731'}
+{'id': 6, 'created_at': '2022-11-13T13:33:53.885296-08:00', 'updated_at': '2022-11-13T13:33:53.885325-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '2 BED 2.5 BATH', 'available': '(4 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,418 -', 'deposit': '1,731', 'rent': 'to'}
+{'company': 'Two Lincoln', 'floorplan': '2 BED 2.5 BATH WITH DEN', 'available': '(2 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,908', 'rent': 'Rent $11,450 -', 'deposit': 'to'}
+{'id': 7, 'created_at': '2022-11-13T13:33:55.050892-08:00', 'updated_at': '2022-11-13T13:33:55.050922-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '2 BED 2.5 BATH WITH DEN', 'available': '(2 Available)', 'bedrooms': 'Bed 2', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 1,908', 'deposit': 'to', 'rent': 'Rent $11,450 -'}
+{'company': 'Two Lincoln', 'floorplan': '3 BED 3.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,327', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $5,000'}
+{'id': 8, 'created_at': '2022-11-13T13:33:56.197048-08:00', 'updated_at': '2022-11-13T13:33:56.197073-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '3 BED 3.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,327', 'deposit': 'Deposit $5,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '3 BED 3.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,867', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $5,000'}
+{'id': 13, 'created_at': '2022-11-13T13:34:02.433378-08:00', 'updated_at': '2022-11-13T13:34:02.433884-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '3 BED 3.5 BATH WITH DEN', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 2,867', 'deposit': 'Deposit $5,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '3 BED 3.5 BATH PENTHOUSE', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 3,730', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $5,000'}
+{'id': 19, 'created_at': '2022-11-13T13:34:08.693322-08:00', 'updated_at': '2022-11-13T13:34:08.693455-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '3 BED 3.5 BATH PENTHOUSE', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 3', 'baths': 'Bath 3.5', 'size': 'Sq.Ft. 3,730', 'deposit': 'Deposit $5,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '1 BED 1.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 912', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $1,000'}
+{'id': 24, 'created_at': '2022-11-13T13:34:10.020127-08:00', 'updated_at': '2022-11-13T13:34:10.020154-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 1.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 1.5', 'size': 'Sq.Ft. 912', 'deposit': 'Deposit $1,000', 'rent': 'Rent Call for Details'}
+{'company': 'Two Lincoln', 'floorplan': '1 BED 2.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 2,089', 'rent': 'Rent Call for Details', 'deposit': 'Deposit $2,500'}
+{'id': 25, 'created_at': '2022-11-13T13:34:11.193632-08:00', 'updated_at': '2022-11-13T13:34:11.193670-08:00', 'company': 'Two Lincoln', 'date': '2022-11-13', 'floorplan': '1 BED 2.5 BATH', 'available': '(Contact for Availability)', 'bedrooms': 'Bed 1', 'baths': 'Bath 2.5', 'size': 'Sq.Ft. 2,089', 'deposit': 'Deposit $2,500', 'rent': 'Rent Call for Details'}
+Scraping job completed!
+[2022-11-13 21:34:12,576] {taskinstance.py:1415} INFO - Marking task as SUCCESS. dag_id=run_webscrapers, task_id=run-webscraper-two_lincoln, execution_date=20220101T000000, start_date=20221113T213344, end_date=20221113T213412
+[2022-11-13 21:34:12,647] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-13 21:34:12,687] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
