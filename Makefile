@@ -18,12 +18,11 @@ start-selenium:
 #                  BACKEND                      #
 #################################################
 start-backend:
-	@docker-compose up backend backend_db --build
+	@docker-compose up backend backend_db 
 
-run-migrations:
+migrations:
 	@docker-compose run backend python manage.py makemigrations
 	@docker-compose run backend python manage.py migrate;
-
 
 #################################################
 #                  WEBSCRAPER                   #

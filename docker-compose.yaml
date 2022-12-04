@@ -274,7 +274,7 @@ services:
         condition: service_completed_successfully
 
   selenium-hub:
-    image: selenium/hub
+    image: seleniarm/hub
     ports:
         - "4442:4442"
         - "4443:4443"
@@ -285,7 +285,7 @@ services:
       GRID_TIMEOUT: 3000
 
   chrome:
-    image: selenium/node-chrome
+    image: seleniarm/node-chromium
     shm_size: 2gb
     depends_on:
         - selenium-hub
@@ -293,7 +293,7 @@ services:
       SE_EVENT_BUS_HOST: selenium-hub
       SE_EVENT_BUS_PUBLISH_PORT: 4442
       SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
-      SE_NODE_GRID_URL: http://localhost:4444
+      SE_NODE_GRID_URL: http://host.docker.internal:4444
       SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
       SE_NODE_MAX_SESSIONS: 20
     ports:
@@ -326,6 +326,7 @@ services:
       - backend_db
 
   backend_db:
+    platform: linux/x86_64
     container_name: backend_db
     image: mysql:5.7
     restart: always
@@ -335,9 +336,18 @@ services:
       MYSQL_PASSWORD: temporarypassword
       MYSQL_ROOT_PASSWORD: temporarypassword
     ports:
-      - 3306:3306
+      - 3307:3306
     expose:
       - 3306
+
+  webscraper:
+    build:
+      context: ./webscrapers
+      dockerfile: Dockerfile
+      target: dev
+    command: python main.py --scraper=booking --service=airline --kwargs="{'start_date':'2022-12-05', 'end_date':'2022-12-06'}"
+    volumes:
+      - ./webscrapers/webscrapers:/app
 
 
 

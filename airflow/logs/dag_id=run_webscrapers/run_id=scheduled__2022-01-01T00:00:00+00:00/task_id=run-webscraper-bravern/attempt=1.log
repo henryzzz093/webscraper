@@ -1,0 +1,951 @@
+[2022-11-13 20:19:37,415] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:19:37,435] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:19:37,437] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:19:37,438] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:19:37,439] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:19:37,458] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-bravern> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:19:37,467] {standard_task_runner.py:52} INFO - Started process 413 to run task
+[2022-11-13 20:19:37,471] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-bravern', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpwbmm8b4v', '--error-file', '/tmp/tmpgqps1rmi']
+[2022-11-13 20:19:37,474] {standard_task_runner.py:80} INFO - Job 3: Subtask run-webscraper-bravern
+[2022-11-13 20:19:37,571] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [running]> on host 113eb9d218de
+[2022-11-13 20:19:37,658] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-bravern
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:19:37,731] {docker.py:373} INFO - Pulling docker image domogordon/development:latest
+[2022-11-13 20:19:39,311] {docker.py:387} INFO - latest: Pulling from domogordon/development
+[2022-11-13 20:19:39,314] {docker.py:387} INFO - 4500a762c546: Pulling fs layer
+[2022-11-13 20:19:39,315] {docker.py:387} INFO - eaa89787764f: Pulling fs layer
+[2022-11-13 20:19:39,316] {docker.py:387} INFO - 4e88666679d8: Pulling fs layer
+[2022-11-13 20:19:39,317] {docker.py:387} INFO - 2f0bd190e5e6: Pulling fs layer
+[2022-11-13 20:19:39,318] {docker.py:387} INFO - b9fbf95118ac: Pulling fs layer
+[2022-11-13 20:19:39,319] {docker.py:387} INFO - b3c984ccd411: Pulling fs layer
+[2022-11-13 20:19:39,319] {docker.py:387} INFO - 510749d384e9: Pulling fs layer
+[2022-11-13 20:19:39,321] {docker.py:387} INFO - 0c3edb417191: Pulling fs layer
+[2022-11-13 20:19:39,323] {docker.py:387} INFO - b153da71e684: Pulling fs layer
+[2022-11-13 20:19:39,324] {docker.py:387} INFO - 2f0bd190e5e6: Waiting
+[2022-11-13 20:19:39,326] {docker.py:387} INFO - b3c984ccd411: Waiting
+[2022-11-13 20:19:39,327] {docker.py:387} INFO - 510749d384e9: Waiting
+[2022-11-13 20:19:39,329] {docker.py:387} INFO - 0c3edb417191: Waiting
+[2022-11-13 20:19:39,330] {docker.py:387} INFO - b153da71e684: Waiting
+[2022-11-13 20:19:39,333] {docker.py:387} INFO - b9fbf95118ac: Waiting
+[2022-11-13 20:19:39,769] {docker.py:387} INFO - eaa89787764f: Downloading
+[2022-11-13 20:19:39,774] {docker.py:387} INFO - 4500a762c546: Downloading
+[2022-11-13 20:19:39,851] {docker.py:387} INFO - 4e88666679d8: Downloading
+[2022-11-13 20:19:39,923] {docker.py:387} INFO - eaa89787764f: Verifying Checksum
+[2022-11-13 20:19:39,925] {docker.py:387} INFO - eaa89787764f: Download complete
+[2022-11-13 20:19:40,191] {docker.py:387} INFO - 4e88666679d8: Verifying Checksum
+[2022-11-13 20:19:40,192] {docker.py:387} INFO - 4e88666679d8: Download complete
+[2022-11-13 20:19:40,455] {docker.py:387} INFO - 2f0bd190e5e6: Downloading
+[2022-11-13 20:19:40,461] {docker.py:387} INFO - 2f0bd190e5e6: Verifying Checksum
+[2022-11-13 20:19:40,467] {docker.py:387} INFO - 2f0bd190e5e6: Download complete
+[2022-11-13 20:19:40,716] {docker.py:387} INFO - b9fbf95118ac: Downloading
+[2022-11-13 20:19:40,972] {docker.py:387} INFO - b9fbf95118ac: Download complete
+[2022-11-13 20:19:41,007] {docker.py:387} INFO - 4500a762c546: Verifying Checksum
+[2022-11-13 20:19:41,012] {docker.py:387} INFO - 4500a762c546: Download complete
+[2022-11-13 20:19:41,124] {docker.py:387} INFO - b3c984ccd411: Downloading
+[2022-11-13 20:19:41,126] {docker.py:387} INFO - b3c984ccd411: Verifying Checksum
+[2022-11-13 20:19:41,127] {docker.py:387} INFO - b3c984ccd411: Download complete
+[2022-11-13 20:19:41,168] {docker.py:387} INFO - 4500a762c546: Extracting
+[2022-11-13 20:19:41,542] {docker.py:387} INFO - 510749d384e9: Downloading
+[2022-11-13 20:19:41,543] {docker.py:387} INFO - 510749d384e9: Download complete
+[2022-11-13 20:19:41,569] {docker.py:387} INFO - b153da71e684: Downloading
+[2022-11-13 20:19:41,611] {docker.py:387} INFO - b153da71e684: Verifying Checksum
+[2022-11-13 20:19:41,613] {docker.py:387} INFO - b153da71e684: Download complete
+[2022-11-13 20:19:41,704] {docker.py:387} INFO - 0c3edb417191: Downloading
+[2022-11-13 20:19:42,030] {docker.py:387} INFO - 0c3edb417191: Verifying Checksum
+[2022-11-13 20:19:42,033] {docker.py:387} INFO - 0c3edb417191: Download complete
+[2022-11-13 20:19:42,518] {docker.py:387} INFO - 4500a762c546: Pull complete
+[2022-11-13 20:19:42,523] {docker.py:387} INFO - eaa89787764f: Extracting
+[2022-11-13 20:19:42,658] {docker.py:387} INFO - eaa89787764f: Pull complete
+[2022-11-13 20:19:42,696] {docker.py:387} INFO - 4e88666679d8: Extracting
+[2022-11-13 20:19:43,037] {docker.py:387} INFO - 4e88666679d8: Pull complete
+[2022-11-13 20:19:43,040] {docker.py:387} INFO - 2f0bd190e5e6: Extracting
+[2022-11-13 20:19:43,078] {docker.py:387} INFO - 2f0bd190e5e6: Pull complete
+[2022-11-13 20:19:43,113] {docker.py:387} INFO - b9fbf95118ac: Extracting
+[2022-11-13 20:19:43,268] {docker.py:387} INFO - b9fbf95118ac: Pull complete
+[2022-11-13 20:19:43,272] {docker.py:387} INFO - b3c984ccd411: Extracting
+[2022-11-13 20:19:43,312] {docker.py:387} INFO - b3c984ccd411: Pull complete
+[2022-11-13 20:19:43,323] {docker.py:387} INFO - 510749d384e9: Extracting
+[2022-11-13 20:19:43,358] {docker.py:387} INFO - 510749d384e9: Pull complete
+[2022-11-13 20:19:43,364] {docker.py:387} INFO - 0c3edb417191: Extracting
+[2022-11-13 20:19:43,757] {docker.py:387} INFO - 0c3edb417191: Pull complete
+[2022-11-13 20:19:43,760] {docker.py:387} INFO - b153da71e684: Extracting
+[2022-11-13 20:19:43,799] {docker.py:387} INFO - b153da71e684: Pull complete
+[2022-11-13 20:19:43,806] {docker.py:382} INFO - Digest: sha256:00234ffef837f01c62b6135a9a5560ea7050f9e1941ef80162f5daacb623581c
+[2022-11-13 20:19:43,810] {docker.py:382} INFO - Status: Downloaded newer image for domogordon/development:latest
+[2022-11-13 20:19:43,813] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:19:43,879] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:20:00,721] {docker.py:310} INFO - BRAVERN
+Running Webscraper!
+Scraping: https://www.thebravernapts.com/floorplans
+[2022-11-13 20:20:00,730] {docker.py:310} INFO - Traceback (most recent call last):
+[2022-11-13 20:20:00,735] {docker.py:310} INFO - File "/app/main.py", line 120, in <module>
+[2022-11-13 20:20:00,739] {docker.py:310} INFO - action_class.run()
+[2022-11-13 20:20:00,744] {docker.py:310} INFO - File "/app/main.py", line 42, in run
+[2022-11-13 20:20:00,747] {docker.py:310} INFO - self.connect()
+[2022-11-13 20:20:00,751] {docker.py:310} INFO - File "/app/main.py", line 26, in connect
+[2022-11-13 20:20:00,753] {docker.py:310} INFO - self.driver = webdriver.Remote(
+[2022-11-13 20:20:00,757] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+[2022-11-13 20:20:00,759] {docker.py:310} INFO - self.start_session(capabilities, browser_profile)
+[2022-11-13 20:20:00,762] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+[2022-11-13 20:20:00,770] {docker.py:310} INFO - response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2022-11-13 20:20:00,773] {docker.py:310} INFO - self.error_handler.check_response(response)
+[2022-11-13 20:20:00,775] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+[2022-11-13 20:20:00,778] {docker.py:310} INFO - raise exception_class(message, screen, stacktrace)
+[2022-11-13 20:20:00,781] {docker.py:310} INFO - selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'cdfe698fe0f4', ip: '172.20.0.7'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 20:20:00,783] {docker.py:310} INFO - 
+[2022-11-13 20:20:01,285] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp4e8r32or")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 315, in _run_image_with_mounts
+    raise AirflowException(f'Docker container failed: {repr(result)} lines {joined_log_lines}')
+airflow.exceptions.AirflowException: Docker container failed: {'Error': None, 'StatusCode': 1} lines BRAVERN
+Running Webscraper!
+Scraping: https://www.thebravernapts.com/floorplans
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+File "/app/main.py", line 42, in run
+self.connect()
+File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'cdfe698fe0f4', ip: '172.20.0.7'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+
+[2022-11-13 20:20:01,305] {taskinstance.py:1415} INFO - Marking task as UP_FOR_RETRY. dag_id=run_webscrapers, task_id=run-webscraper-bravern, execution_date=20220101T000000, start_date=20221113T201937, end_date=20221113T202001
+[2022-11-13 20:20:01,328] {standard_task_runner.py:92} ERROR - Failed to execute job 3 for task run-webscraper-bravern (Docker container failed: {'Error': None, 'StatusCode': 1} lines BRAVERN
+Running Webscraper!
+Scraping: https://www.thebravernapts.com/floorplans
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+File "/app/main.py", line 42, in run
+self.connect()
+File "/app/main.py", line 26, in connect
+self.driver = webdriver.Remote(
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'cdfe698fe0f4', ip: '172.20.0.7'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+; 413)
+[2022-11-13 20:20:01,367] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 20:20:01,434] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-11-13 20:42:21,130] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:42:21,144] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:42:21,151] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:42:21,153] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:42:21,155] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:42:21,188] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-bravern> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:42:21,198] {standard_task_runner.py:52} INFO - Started process 234 to run task
+[2022-11-13 20:42:21,205] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-bravern', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpohi42ndi', '--error-file', '/tmp/tmpf7d7van9']
+[2022-11-13 20:42:21,212] {standard_task_runner.py:80} INFO - Job 4: Subtask run-webscraper-bravern
+[2022-11-13 20:42:21,364] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [running]> on host f3befed808ff
+[2022-11-13 20:42:21,470] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-bravern
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:42:21,564] {docker.py:373} INFO - Pulling docker image domogordon/development:latest
+[2022-11-13 20:42:23,405] {docker.py:387} INFO - latest: Pulling from domogordon/development
+[2022-11-13 20:42:23,412] {docker.py:387} INFO - 4500a762c546: Pulling fs layer
+[2022-11-13 20:42:23,416] {docker.py:387} INFO - eaa89787764f: Pulling fs layer
+[2022-11-13 20:42:23,418] {docker.py:387} INFO - 4e88666679d8: Pulling fs layer
+[2022-11-13 20:42:23,421] {docker.py:387} INFO - 2f0bd190e5e6: Pulling fs layer
+[2022-11-13 20:42:23,426] {docker.py:387} INFO - b9fbf95118ac: Pulling fs layer
+[2022-11-13 20:42:23,431] {docker.py:387} INFO - b3c984ccd411: Pulling fs layer
+[2022-11-13 20:42:23,435] {docker.py:387} INFO - 510749d384e9: Pulling fs layer
+[2022-11-13 20:42:23,436] {docker.py:387} INFO - 0c3edb417191: Pulling fs layer
+[2022-11-13 20:42:23,437] {docker.py:387} INFO - b153da71e684: Pulling fs layer
+[2022-11-13 20:42:23,439] {docker.py:387} INFO - b153da71e684: Waiting
+[2022-11-13 20:42:23,440] {docker.py:387} INFO - 2f0bd190e5e6: Waiting
+[2022-11-13 20:42:23,441] {docker.py:387} INFO - b9fbf95118ac: Waiting
+[2022-11-13 20:42:23,443] {docker.py:387} INFO - b3c984ccd411: Waiting
+[2022-11-13 20:42:23,445] {docker.py:387} INFO - 510749d384e9: Waiting
+[2022-11-13 20:42:23,446] {docker.py:387} INFO - 0c3edb417191: Waiting
+[2022-11-13 20:42:23,537] {docker.py:387} INFO - eaa89787764f: Downloading
+[2022-11-13 20:42:23,564] {docker.py:387} INFO - 4e88666679d8: Downloading
+[2022-11-13 20:42:23,597] {docker.py:387} INFO - 4500a762c546: Downloading
+[2022-11-13 20:42:23,730] {docker.py:387} INFO - eaa89787764f: Verifying Checksum
+[2022-11-13 20:42:23,753] {docker.py:387} INFO - eaa89787764f: Download complete
+[2022-11-13 20:42:24,279] {docker.py:387} INFO - 2f0bd190e5e6: Downloading
+[2022-11-13 20:42:24,285] {docker.py:387} INFO - 2f0bd190e5e6: Verifying Checksum
+[2022-11-13 20:42:24,293] {docker.py:387} INFO - 2f0bd190e5e6: Download complete
+[2022-11-13 20:42:24,725] {docker.py:387} INFO - b9fbf95118ac: Downloading
+[2022-11-13 20:42:24,959] {docker.py:387} INFO - b9fbf95118ac: Verifying Checksum
+[2022-11-13 20:42:24,962] {docker.py:387} INFO - b9fbf95118ac: Download complete
+[2022-11-13 20:42:25,441] {docker.py:387} INFO - b3c984ccd411: Downloading
+[2022-11-13 20:42:25,460] {docker.py:387} INFO - b3c984ccd411: Verifying Checksum
+[2022-11-13 20:42:25,465] {docker.py:387} INFO - b3c984ccd411: Download complete
+[2022-11-13 20:42:25,520] {docker.py:387} INFO - 4e88666679d8: Download complete
+[2022-11-13 20:42:25,870] {docker.py:387} INFO - 510749d384e9: Downloading
+[2022-11-13 20:42:25,882] {docker.py:387} INFO - 510749d384e9: Verifying Checksum
+[2022-11-13 20:42:25,892] {docker.py:387} INFO - 510749d384e9: Download complete
+[2022-11-13 20:42:26,187] {docker.py:387} INFO - 0c3edb417191: Downloading
+[2022-11-13 20:42:26,380] {docker.py:387} INFO - b153da71e684: Downloading
+[2022-11-13 20:42:26,427] {docker.py:387} INFO - b153da71e684: Verifying Checksum
+[2022-11-13 20:42:26,455] {docker.py:387} INFO - b153da71e684: Download complete
+[2022-11-13 20:42:26,634] {docker.py:387} INFO - 0c3edb417191: Verifying Checksum
+[2022-11-13 20:42:26,645] {docker.py:387} INFO - 0c3edb417191: Download complete
+[2022-11-13 20:42:26,971] {docker.py:387} INFO - 4500a762c546: Verifying Checksum
+[2022-11-13 20:42:26,984] {docker.py:387} INFO - 4500a762c546: Download complete
+[2022-11-13 20:42:27,331] {docker.py:387} INFO - 4500a762c546: Extracting
+[2022-11-13 20:42:29,196] {docker.py:387} INFO - 4500a762c546: Pull complete
+[2022-11-13 20:42:29,218] {docker.py:387} INFO - eaa89787764f: Extracting
+[2022-11-13 20:42:29,521] {docker.py:387} INFO - eaa89787764f: Pull complete
+[2022-11-13 20:42:29,629] {docker.py:387} INFO - 4e88666679d8: Extracting
+[2022-11-13 20:42:30,461] {docker.py:387} INFO - 4e88666679d8: Pull complete
+[2022-11-13 20:42:30,472] {docker.py:387} INFO - 2f0bd190e5e6: Extracting
+[2022-11-13 20:42:30,556] {docker.py:387} INFO - 2f0bd190e5e6: Pull complete
+[2022-11-13 20:42:30,655] {docker.py:387} INFO - b9fbf95118ac: Extracting
+[2022-11-13 20:42:30,968] {docker.py:387} INFO - b9fbf95118ac: Pull complete
+[2022-11-13 20:42:30,979] {docker.py:387} INFO - b3c984ccd411: Extracting
+[2022-11-13 20:42:31,093] {docker.py:387} INFO - b3c984ccd411: Pull complete
+[2022-11-13 20:42:31,104] {docker.py:387} INFO - 510749d384e9: Extracting
+[2022-11-13 20:42:31,204] {docker.py:387} INFO - 510749d384e9: Pull complete
+[2022-11-13 20:42:31,221] {docker.py:387} INFO - 0c3edb417191: Extracting
+[2022-11-13 20:42:31,872] {docker.py:387} INFO - 0c3edb417191: Pull complete
+[2022-11-13 20:42:31,881] {docker.py:387} INFO - b153da71e684: Extracting
+[2022-11-13 20:42:31,952] {docker.py:387} INFO - b153da71e684: Pull complete
+[2022-11-13 20:42:31,977] {docker.py:382} INFO - Digest: sha256:00234ffef837f01c62b6135a9a5560ea7050f9e1941ef80162f5daacb623581c
+[2022-11-13 20:42:31,994] {docker.py:382} INFO - Status: Downloaded newer image for domogordon/development:latest
+[2022-11-13 20:42:32,009] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:42:32,044] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:49:41,316] {local_task_job.py:220} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2022-11-13 20:49:41,324] {process_utils.py:125} INFO - Sending Signals.SIGTERM to group 234. PIDs of all processes in the group: [234]
+[2022-11-13 20:49:41,328] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 234
+[2022-11-13 20:49:41,333] {taskinstance.py:1561} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-11-13 20:49:41,336] {docker.py:416} INFO - Stopping docker container
+[2022-11-13 20:49:51,918] {process_utils.py:75} INFO - Process psutil.Process(pid=234, status='terminated', exitcode=0, started='20:42:20') (234) terminated with exit code 0
+[2022-11-13 20:50:23,757] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:50:23,784] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:50:23,788] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:50:23,794] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:50:23,800] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:50:23,818] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-bravern> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:50:23,825] {standard_task_runner.py:52} INFO - Started process 572 to run task
+[2022-11-13 20:50:23,833] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-bravern', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpwd5wxf17', '--error-file', '/tmp/tmpm_et7_u0']
+[2022-11-13 20:50:23,848] {standard_task_runner.py:80} INFO - Job 5: Subtask run-webscraper-bravern
+[2022-11-13 20:50:23,988] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [running]> on host f3befed808ff
+[2022-11-13 20:50:24,116] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-bravern
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:50:24,203] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:50:24,239] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:52:17,591] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp8sogwq2u")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff99cf1190>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/1a0c477a25db84b803c7d10848c7536403c2f97b4bd67d4d671f83e67eb55a73/wait (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cf1190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 312, in _run_image_with_mounts
+    result = self.cli.wait(self.container['Id'])
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 1303, in wait
+    res = self._post(url, timeout=timeout, params=params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 233, in _post
+    return self.post(url, **self._set_request_timeout(kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/1a0c477a25db84b803c7d10848c7536403c2f97b4bd67d4d671f83e67eb55a73/wait (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cf1190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff99cf16a0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/1a0c477a25db84b803c7d10848c7536403c2f97b4bd67d4d671f83e67eb55a73?v=False&link=False&force=False (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cf16a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 338, in _run_image_with_mounts
+    self.cli.remove_container(self.container['Id'])
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 1007, in remove_container
+    res = self._delete(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 245, in _delete
+    return self.delete(url, **self._set_request_timeout(kwargs))
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 669, in delete
+    return self.request("DELETE", url, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/1a0c477a25db84b803c7d10848c7536403c2f97b4bd67d4d671f83e67eb55a73?v=False&link=False&force=False (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cf16a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2022-11-13 20:52:17,807] {taskinstance.py:1415} INFO - Marking task as UP_FOR_RETRY. dag_id=run_webscrapers, task_id=run-webscraper-bravern, execution_date=20220101T000000, start_date=20221113T205023, end_date=20221113T205217
+[2022-11-13 20:52:17,875] {standard_task_runner.py:92} ERROR - Failed to execute job 5 for task run-webscraper-bravern (HTTPConnectionPool(host='docker-proxy', port=2375): Max retries exceeded with url: /v1.41/containers/1a0c477a25db84b803c7d10848c7536403c2f97b4bd67d4d671f83e67eb55a73?v=False&link=False&force=False (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff99cf16a0>: Failed to establish a new connection: [Errno 111] Connection refused')); 572)
+[2022-11-13 20:52:17,998] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 20:52:18,250] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-11-13 20:55:36,987] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:55:36,998] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 20:55:37,001] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:55:37,004] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 20:55:37,006] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 20:55:37,017] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-bravern> on 2022-01-01 00:00:00+00:00
+[2022-11-13 20:55:37,023] {standard_task_runner.py:52} INFO - Started process 72 to run task
+[2022-11-13 20:55:37,027] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-bravern', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmp8kuz3yhz', '--error-file', '/tmp/tmp29w2btyl']
+[2022-11-13 20:55:37,033] {standard_task_runner.py:80} INFO - Job 4: Subtask run-webscraper-bravern
+[2022-11-13 20:55:37,142] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [running]> on host c943e7c407a4
+[2022-11-13 20:55:37,246] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-bravern
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 20:55:37,294] {docker.py:373} INFO - Pulling docker image domogordon/development:latest
+[2022-11-13 20:55:39,406] {docker.py:387} INFO - latest: Pulling from domogordon/development
+[2022-11-13 20:55:39,408] {docker.py:387} INFO - 4500a762c546: Pulling fs layer
+[2022-11-13 20:55:39,410] {docker.py:387} INFO - eaa89787764f: Pulling fs layer
+[2022-11-13 20:55:39,412] {docker.py:387} INFO - 4e88666679d8: Pulling fs layer
+[2022-11-13 20:55:39,413] {docker.py:387} INFO - 2f0bd190e5e6: Pulling fs layer
+[2022-11-13 20:55:39,414] {docker.py:387} INFO - b9fbf95118ac: Pulling fs layer
+[2022-11-13 20:55:39,416] {docker.py:387} INFO - b3c984ccd411: Pulling fs layer
+[2022-11-13 20:55:39,417] {docker.py:387} INFO - 510749d384e9: Pulling fs layer
+[2022-11-13 20:55:39,418] {docker.py:387} INFO - 0c3edb417191: Pulling fs layer
+[2022-11-13 20:55:39,419] {docker.py:387} INFO - b153da71e684: Pulling fs layer
+[2022-11-13 20:55:39,420] {docker.py:387} INFO - b153da71e684: Waiting
+[2022-11-13 20:55:39,420] {docker.py:387} INFO - 2f0bd190e5e6: Waiting
+[2022-11-13 20:55:39,421] {docker.py:387} INFO - b9fbf95118ac: Waiting
+[2022-11-13 20:55:39,422] {docker.py:387} INFO - b3c984ccd411: Waiting
+[2022-11-13 20:55:39,423] {docker.py:387} INFO - 510749d384e9: Waiting
+[2022-11-13 20:55:39,423] {docker.py:387} INFO - 0c3edb417191: Waiting
+[2022-11-13 20:55:39,435] {docker.py:387} INFO - eaa89787764f: Downloading
+[2022-11-13 20:55:39,455] {docker.py:387} INFO - 4e88666679d8: Downloading
+[2022-11-13 20:55:39,458] {docker.py:387} INFO - 4500a762c546: Downloading
+[2022-11-13 20:55:39,623] {docker.py:387} INFO - eaa89787764f: Verifying Checksum
+[2022-11-13 20:55:39,634] {docker.py:387} INFO - eaa89787764f: Download complete
+[2022-11-13 20:55:40,127] {docker.py:387} INFO - 2f0bd190e5e6: Downloading
+[2022-11-13 20:55:40,138] {docker.py:387} INFO - 2f0bd190e5e6: Verifying Checksum
+[2022-11-13 20:55:40,145] {docker.py:387} INFO - 2f0bd190e5e6: Download complete
+[2022-11-13 20:55:40,153] {docker.py:387} INFO - 4500a762c546: Verifying Checksum
+[2022-11-13 20:55:40,156] {docker.py:387} INFO - 4500a762c546: Download complete
+[2022-11-13 20:55:40,218] {docker.py:387} INFO - 4500a762c546: Extracting
+[2022-11-13 20:55:40,224] {docker.py:387} INFO - 4e88666679d8: Download complete
+[2022-11-13 20:55:40,514] {docker.py:387} INFO - b3c984ccd411: Downloading
+[2022-11-13 20:55:40,519] {docker.py:387} INFO - b3c984ccd411: Download complete
+[2022-11-13 20:55:40,545] {docker.py:387} INFO - b9fbf95118ac: Downloading
+[2022-11-13 20:55:40,688] {docker.py:387} INFO - b9fbf95118ac: Download complete
+[2022-11-13 20:55:40,714] {docker.py:387} INFO - 510749d384e9: Downloading
+[2022-11-13 20:55:40,716] {docker.py:387} INFO - 510749d384e9: Verifying Checksum
+[2022-11-13 20:55:40,716] {docker.py:387} INFO - 510749d384e9: Download complete
+[2022-11-13 20:55:41,001] {docker.py:387} INFO - 0c3edb417191: Downloading
+[2022-11-13 20:55:41,077] {docker.py:387} INFO - b153da71e684: Downloading
+[2022-11-13 20:55:41,121] {docker.py:387} INFO - b153da71e684: Verifying Checksum
+[2022-11-13 20:55:41,124] {docker.py:387} INFO - b153da71e684: Download complete
+[2022-11-13 20:55:41,358] {docker.py:387} INFO - 0c3edb417191: Verifying Checksum
+[2022-11-13 20:55:41,361] {docker.py:387} INFO - 0c3edb417191: Download complete
+[2022-11-13 20:55:41,568] {docker.py:387} INFO - 4500a762c546: Pull complete
+[2022-11-13 20:55:41,575] {docker.py:387} INFO - eaa89787764f: Extracting
+[2022-11-13 20:55:41,736] {docker.py:387} INFO - eaa89787764f: Pull complete
+[2022-11-13 20:55:41,777] {docker.py:387} INFO - 4e88666679d8: Extracting
+[2022-11-13 20:55:42,363] {docker.py:387} INFO - 4e88666679d8: Pull complete
+[2022-11-13 20:55:42,379] {docker.py:387} INFO - 2f0bd190e5e6: Extracting
+[2022-11-13 20:55:42,523] {docker.py:387} INFO - 2f0bd190e5e6: Pull complete
+[2022-11-13 20:55:42,604] {docker.py:387} INFO - b9fbf95118ac: Extracting
+[2022-11-13 20:55:42,857] {docker.py:387} INFO - b9fbf95118ac: Pull complete
+[2022-11-13 20:55:42,864] {docker.py:387} INFO - b3c984ccd411: Extracting
+[2022-11-13 20:55:42,916] {docker.py:387} INFO - b3c984ccd411: Pull complete
+[2022-11-13 20:55:42,922] {docker.py:387} INFO - 510749d384e9: Extracting
+[2022-11-13 20:55:42,969] {docker.py:387} INFO - 510749d384e9: Pull complete
+[2022-11-13 20:55:42,978] {docker.py:387} INFO - 0c3edb417191: Extracting
+[2022-11-13 20:55:43,475] {docker.py:387} INFO - 0c3edb417191: Pull complete
+[2022-11-13 20:55:43,479] {docker.py:387} INFO - b153da71e684: Extracting
+[2022-11-13 20:55:43,533] {docker.py:387} INFO - b153da71e684: Pull complete
+[2022-11-13 20:55:43,551] {docker.py:382} INFO - Digest: sha256:00234ffef837f01c62b6135a9a5560ea7050f9e1941ef80162f5daacb623581c
+[2022-11-13 20:55:43,564] {docker.py:382} INFO - Status: Downloaded newer image for domogordon/development:latest
+[2022-11-13 20:55:43,578] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 20:55:43,664] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 20:55:59,739] {docker.py:310} INFO - BRAVERN
+Running Webscraper!
+Scraping: https://www.thebravernapts.com/floorplans
+[2022-11-13 20:55:59,746] {docker.py:310} INFO - Traceback (most recent call last):
+[2022-11-13 20:55:59,751] {docker.py:310} INFO - File "/app/main.py", line 120, in <module>
+[2022-11-13 20:55:59,753] {docker.py:310} INFO - action_class.run()
+  File "/app/main.py", line 42, in run
+    self.connect()
+  File "/app/main.py", line 26, in connect
+    self.driver = webdriver.Remote(
+[2022-11-13 20:55:59,755] {docker.py:310} INFO - File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+[2022-11-13 20:55:59,758] {docker.py:310} INFO - self.start_session(capabilities, browser_profile)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+[2022-11-13 20:55:59,761] {docker.py:310} INFO - response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+[2022-11-13 20:55:59,762] {docker.py:310} INFO - self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+[2022-11-13 20:55:59,765] {docker.py:310} INFO - raise exception_class(message, screen, stacktrace)
+[2022-11-13 20:55:59,766] {docker.py:310} INFO - selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 20:56:00,311] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 268, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1022, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://docker-proxy:2375/v1.41/containers/create
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 255, in _run_image
+    return self._run_image_with_mounts(self.mounts + [tmp_mount], add_tmp_variable=True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 278, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 428, in create_container
+    return self.create_container_from_config(config, name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/container.py", line 439, in create_container_from_config
+    return self._result(res, True)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 274, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/api/client.py", line 270, in _raise_for_status
+    raise create_api_error_from_http_exception(e)
+  File "/home/airflow/.local/lib/python3.9/site-packages/docker/errors.py", line 31, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation)
+docker.errors.APIError: 400 Client Error for http://docker-proxy:2375/v1.41/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp47qz46ab")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 389, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 264, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/docker/operators/docker.py", line 315, in _run_image_with_mounts
+    raise AirflowException(f'Docker container failed: {repr(result)} lines {joined_log_lines}')
+airflow.exceptions.AirflowException: Docker container failed: {'Error': None, 'StatusCode': 1} lines BRAVERN
+Running Webscraper!
+Scraping: https://www.thebravernapts.com/floorplans
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+    self.connect()
+  File "/app/main.py", line 26, in connect
+    self.driver = webdriver.Remote(
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829)
+[2022-11-13 20:56:00,334] {taskinstance.py:1415} INFO - Marking task as UP_FOR_RETRY. dag_id=run_webscrapers, task_id=run-webscraper-bravern, execution_date=20220101T000000, start_date=20221113T205536, end_date=20221113T205600
+[2022-11-13 20:56:00,384] {standard_task_runner.py:92} ERROR - Failed to execute job 4 for task run-webscraper-bravern (Docker container failed: {'Error': None, 'StatusCode': 1} lines BRAVERN
+Running Webscraper!
+Scraping: https://www.thebravernapts.com/floorplans
+Traceback (most recent call last):
+File "/app/main.py", line 120, in <module>
+action_class.run()
+  File "/app/main.py", line 42, in run
+    self.connect()
+  File "/app/main.py", line 26, in connect
+    self.driver = webdriver.Remote(
+File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 272, in __init__
+self.start_session(capabilities, browser_profile)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 364, in start_session
+response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 243, in check_response
+raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fe4c6bba287d', ip: '172.18.0.9'
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.104-linuxkit', java.version: '11.0.16'
+Driver info: driver.version: unknown
+Stacktrace:
+    at org.openqa.selenium.grid.node.remote.RemoteNode.newSession (RemoteNode.java:150)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.startSession (LocalDistributor.java:645)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor.newSession (LocalDistributor.java:564)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.handleNewSessionRequest (LocalDistributor.java:818)
+    at org.openqa.selenium.grid.distributor.local.LocalDistributor$NewSessionRunnable.lambda$run$1 (LocalDistributor.java:779)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1128)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:628)
+    at java.lang.Thread.run (Thread.java:829); 72)
+[2022-11-13 20:56:00,421] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-11-13 20:56:00,470] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-11-13 21:33:44,941] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 21:33:44,948] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-11-13 21:33:44,950] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:33:44,950] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-11-13 21:33:44,951] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-13 21:33:44,958] {taskinstance.py:1397} INFO - Executing <Task(DockerOperator): run-webscraper-bravern> on 2022-01-01 00:00:00+00:00
+[2022-11-13 21:33:44,964] {standard_task_runner.py:52} INFO - Started process 119 to run task
+[2022-11-13 21:33:44,966] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'run_webscrapers', 'run-webscraper-bravern', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/run_webscraper.py', '--cfg-path', '/tmp/tmpuh0k6zqx', '--error-file', '/tmp/tmpn9o4hny6']
+[2022-11-13 21:33:44,968] {standard_task_runner.py:80} INFO - Job 4: Subtask run-webscraper-bravern
+[2022-11-13 21:33:45,050] {task_command.py:371} INFO - Running <TaskInstance: run_webscrapers.run-webscraper-bravern scheduled__2022-01-01T00:00:00+00:00 [running]> on host b2897896724f
+[2022-11-13 21:33:45,120] {taskinstance.py:1589} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=run_webscrapers
+AIRFLOW_CTX_TASK_ID=run-webscraper-bravern
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-11-13 21:33:45,218] {docker.py:248} INFO - Starting docker container from image domogordon/development:latest
+[2022-11-13 21:33:45,246] {docker.py:258} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2022-11-13 21:34:09,144] {docker.py:310} INFO - BRAVERN
+Running Webscraper!
+Scraping: https://www.thebravernapts.com/floorplans
+{'company': 'The Bravern', 'floorplan': 'B16 South', 'available': '2 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,438 Sq. Ft.', 'rent': 'Starting at $4,835', 'deposit': 'Deposit: $1,000'}
+{'id': 3, 'created_at': '2022-11-13T13:33:52.819831-08:00', 'updated_at': '2022-11-13T13:33:52.819867-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B16 South', 'available': '2 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,438 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $4,835'}
+{'company': 'The Bravern', 'floorplan': 'B10 North', 'available': '2 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,460 Sq. Ft.', 'rent': 'Starting at $4,205', 'deposit': 'Deposit: $1,000'}
+{'id': 4, 'created_at': '2022-11-13T13:33:52.887100-08:00', 'updated_at': '2022-11-13T13:33:52.887131-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B10 North', 'available': '2 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,460 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $4,205'}
+{'company': 'The Bravern', 'floorplan': 'A5 South', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '647 Sq. Ft.', 'rent': 'Starting at $2,965', 'deposit': 'Deposit: $500'}
+{'id': 5, 'created_at': '2022-11-13T13:33:52.955938-08:00', 'updated_at': '2022-11-13T13:33:52.955966-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A5 South', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '647 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Starting at $2,965'}
+{'company': 'The Bravern', 'floorplan': 'A20 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '960 Sq. Ft.', 'rent': 'Starting at $3,925', 'deposit': 'Deposit: $500'}
+{'id': 9, 'created_at': '2022-11-13T13:33:58.037813-08:00', 'updated_at': '2022-11-13T13:33:58.037882-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A20 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '960 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Starting at $3,925'}
+{'company': 'The Bravern', 'floorplan': 'A7 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '994 Sq. Ft.', 'rent': 'Starting at $3,535', 'deposit': 'Deposit: $500'}
+{'id': 10, 'created_at': '2022-11-13T13:33:58.107735-08:00', 'updated_at': '2022-11-13T13:33:58.107769-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A7 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '994 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Starting at $3,535'}
+{'company': 'The Bravern', 'floorplan': 'A23 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,075 Sq. Ft.', 'rent': 'Starting at $3,855', 'deposit': 'Deposit: $500'}
+{'id': 11, 'created_at': '2022-11-13T13:33:58.185865-08:00', 'updated_at': '2022-11-13T13:33:58.185894-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A23 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,075 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Starting at $3,855'}
+{'company': 'The Bravern', 'floorplan': 'A24 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,078 Sq. Ft.', 'rent': 'Starting at $3,805', 'deposit': 'Deposit: $500'}
+{'id': 12, 'created_at': '2022-11-13T13:33:58.280117-08:00', 'updated_at': '2022-11-13T13:33:58.280145-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A24 North', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,078 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Starting at $3,805'}
+{'company': 'The Bravern', 'floorplan': 'A17 South', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,106 Sq. Ft.', 'rent': 'Starting at $3,920', 'deposit': 'Deposit: $500'}
+{'id': 14, 'created_at': '2022-11-13T13:34:03.373473-08:00', 'updated_at': '2022-11-13T13:34:03.373561-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A17 South', 'available': '1 Available', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,106 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Starting at $3,920'}
+{'company': 'The Bravern', 'floorplan': 'B6 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,335 Sq. Ft.', 'rent': 'Starting at $4,310', 'deposit': 'Deposit: $1,000'}
+{'id': 15, 'created_at': '2022-11-13T13:34:03.467280-08:00', 'updated_at': '2022-11-13T13:34:03.467313-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B6 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,335 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $4,310'}
+{'company': 'The Bravern', 'floorplan': 'B7 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,448 Sq. Ft.', 'rent': 'Starting at $4,385', 'deposit': 'Deposit: $1,000'}
+{'id': 16, 'created_at': '2022-11-13T13:34:03.613611-08:00', 'updated_at': '2022-11-13T13:34:03.613642-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B7 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,448 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $4,385'}
+{'company': 'The Bravern', 'floorplan': 'B21 South', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,550 Sq. Ft.', 'rent': 'Starting at $4,885', 'deposit': 'Deposit: $1,000'}
+{'id': 17, 'created_at': '2022-11-13T13:34:03.728500-08:00', 'updated_at': '2022-11-13T13:34:03.728530-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B21 South', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,550 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $4,885'}
+{'company': 'The Bravern', 'floorplan': 'B19 South', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,743 Sq. Ft.', 'rent': 'Starting at $5,740', 'deposit': 'Deposit: $1,000'}
+{'id': 18, 'created_at': '2022-11-13T13:34:03.847946-08:00', 'updated_at': '2022-11-13T13:34:03.847984-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B19 South', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,743 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $5,740'}
+{'company': 'The Bravern', 'floorplan': 'B17 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,756 Sq. Ft.', 'rent': 'Starting at $5,210', 'deposit': 'Deposit: $1,000'}
+{'id': 20, 'created_at': '2022-11-13T13:34:08.933566-08:00', 'updated_at': '2022-11-13T13:34:08.933595-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B17 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,756 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $5,210'}
+{'company': 'The Bravern', 'floorplan': 'B20 South', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,853 Sq. Ft.', 'rent': 'Starting at $5,335', 'deposit': 'Deposit: $1,000'}
+{'id': 21, 'created_at': '2022-11-13T13:34:09.026255-08:00', 'updated_at': '2022-11-13T13:34:09.026286-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B20 South', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,853 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $5,335'}
+{'company': 'The Bravern', 'floorplan': 'B24 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,962 Sq. Ft.', 'rent': 'Starting at $6,035', 'deposit': 'Deposit: $1,000'}
+[2022-11-13 21:34:35,933] {docker.py:310} INFO - {'id': 22, 'created_at': '2022-11-13T13:34:09.125809-08:00', 'updated_at': '2022-11-13T13:34:09.125840-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B24 North', 'available': '1 Available', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,962 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Starting at $6,035'}
+{'company': 'The Bravern', 'floorplan': 'South 3101 Penthouse', 'available': '1 Available', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '4,115 Sq. Ft.', 'rent': 'Starting at $18,999', 'deposit': 'Deposit: $5,000'}
+{'id': 23, 'created_at': '2022-11-13T13:34:09.208307-08:00', 'updated_at': '2022-11-13T13:34:09.208366-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'South 3101 Penthouse', 'available': '1 Available', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '4,115 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Starting at $18,999'}
+{'company': 'The Bravern', 'floorplan': 'S1 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '597 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 26, 'created_at': '2022-11-13T13:34:14.389631-08:00', 'updated_at': '2022-11-13T13:34:14.389940-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S1 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '597 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A4 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '613 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 27, 'created_at': '2022-11-13T13:34:14.721158-08:00', 'updated_at': '2022-11-13T13:34:14.721238-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A4 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '613 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A3 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '632 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 28, 'created_at': '2022-11-13T13:34:14.842159-08:00', 'updated_at': '2022-11-13T13:34:14.842191-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A3 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '632 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S4 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '637 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 29, 'created_at': '2022-11-13T13:34:19.985996-08:00', 'updated_at': '2022-11-13T13:34:19.986123-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S4 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '637 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S5 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '649 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 30, 'created_at': '2022-11-13T13:34:20.053825-08:00', 'updated_at': '2022-11-13T13:34:20.053851-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S5 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '649 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S3 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '653 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 31, 'created_at': '2022-11-13T13:34:20.136294-08:00', 'updated_at': '2022-11-13T13:34:20.136320-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S3 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '653 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S2 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '665 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 32, 'created_at': '2022-11-13T13:34:25.209234-08:00', 'updated_at': '2022-11-13T13:34:25.209266-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S2 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '665 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S7 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '667 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 33, 'created_at': '2022-11-13T13:34:25.302906-08:00', 'updated_at': '2022-11-13T13:34:25.302938-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S7 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '667 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S14 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '679 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 34, 'created_at': '2022-11-13T13:34:25.432534-08:00', 'updated_at': '2022-11-13T13:34:25.432563-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S14 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '679 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S6 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '745 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 35, 'created_at': '2022-11-13T13:34:30.510380-08:00', 'updated_at': '2022-11-13T13:34:30.510410-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S6 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '745 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S12 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '750 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 36, 'created_at': '2022-11-13T13:34:30.606300-08:00', 'updated_at': '2022-11-13T13:34:30.606331-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S12 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '750 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S9 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '752 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 37, 'created_at': '2022-11-13T13:34:30.705677-08:00', 'updated_at': '2022-11-13T13:34:30.705754-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S9 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '752 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A28 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '762 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 38, 'created_at': '2022-11-13T13:34:35.800050-08:00', 'updated_at': '2022-11-13T13:34:35.800114-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A28 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '762 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+[2022-11-13 21:35:02,202] {docker.py:310} INFO - {'company': 'The Bravern', 'floorplan': 'A1 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '830 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 39, 'created_at': '2022-11-13T13:34:35.963976-08:00', 'updated_at': '2022-11-13T13:34:35.964010-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A1 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '830 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S11 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '830 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 40, 'created_at': '2022-11-13T13:34:41.123973-08:00', 'updated_at': '2022-11-13T13:34:41.124066-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S11 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '830 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S10 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '843 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 41, 'created_at': '2022-11-13T13:34:46.204843-08:00', 'updated_at': '2022-11-13T13:34:46.204957-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S10 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '843 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A21 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '846 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 42, 'created_at': '2022-11-13T13:34:46.282707-08:00', 'updated_at': '2022-11-13T13:34:46.282733-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A21 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '846 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S8 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '853 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 43, 'created_at': '2022-11-13T13:34:46.361662-08:00', 'updated_at': '2022-11-13T13:34:46.361688-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S8 North', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '853 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A18 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '865 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 44, 'created_at': '2022-11-13T13:34:51.434391-08:00', 'updated_at': '2022-11-13T13:34:51.434433-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A18 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '865 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'S13 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '922 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 45, 'created_at': '2022-11-13T13:34:51.546562-08:00', 'updated_at': '2022-11-13T13:34:51.546603-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'S13 South', 'available': 'Inquire for details', 'bedrooms': 'Studio', 'baths': '1 Bath', 'size': '922 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A2 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '938 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 46, 'created_at': '2022-11-13T13:34:51.626787-08:00', 'updated_at': '2022-11-13T13:34:51.626812-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A2 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '938 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A19 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '951 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 47, 'created_at': '2022-11-13T13:34:56.705382-08:00', 'updated_at': '2022-11-13T13:34:56.705452-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A19 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1 Bath', 'size': '951 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A10 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '969 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 48, 'created_at': '2022-11-13T13:35:01.806414-08:00', 'updated_at': '2022-11-13T13:35:01.806444-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A10 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '969 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A11 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '990 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 49, 'created_at': '2022-11-13T13:35:01.895342-08:00', 'updated_at': '2022-11-13T13:35:01.895371-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A11 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '990 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A16 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,000 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 50, 'created_at': '2022-11-13T13:35:01.963140-08:00', 'updated_at': '2022-11-13T13:35:01.963183-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A16 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,000 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A22 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,041 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 51, 'created_at': '2022-11-13T13:35:02.042701-08:00', 'updated_at': '2022-11-13T13:35:02.042738-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A22 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,041 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A13 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,042 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 52, 'created_at': '2022-11-13T13:35:02.121107-08:00', 'updated_at': '2022-11-13T13:35:02.121137-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A13 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,042 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A15 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,046 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+[2022-11-13 21:35:23,458] {docker.py:310} INFO - {'id': 53, 'created_at': '2022-11-13T13:35:02.190985-08:00', 'updated_at': '2022-11-13T13:35:02.191012-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A15 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,046 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A14 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,101 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 54, 'created_at': '2022-11-13T13:35:02.273245-08:00', 'updated_at': '2022-11-13T13:35:02.273294-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A14 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,101 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A25 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,101 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 55, 'created_at': '2022-11-13T13:35:02.374973-08:00', 'updated_at': '2022-11-13T13:35:02.375014-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A25 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,101 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A27 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,113 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 56, 'created_at': '2022-11-13T13:35:07.462633-08:00', 'updated_at': '2022-11-13T13:35:07.462729-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A27 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,113 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A12 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,154 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 57, 'created_at': '2022-11-13T13:35:07.526596-08:00', 'updated_at': '2022-11-13T13:35:07.526621-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A12 South', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,154 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A26 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,203 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 58, 'created_at': '2022-11-13T13:35:07.605503-08:00', 'updated_at': '2022-11-13T13:35:07.605530-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A26 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,203 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B2 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,222 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 59, 'created_at': '2022-11-13T13:35:07.678085-08:00', 'updated_at': '2022-11-13T13:35:07.678118-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B2 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,222 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B12 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,242 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 60, 'created_at': '2022-11-13T13:35:12.785585-08:00', 'updated_at': '2022-11-13T13:35:12.785640-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B12 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,242 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B15 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,300 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 61, 'created_at': '2022-11-13T13:35:17.901318-08:00', 'updated_at': '2022-11-13T13:35:17.901377-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B15 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,300 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'A9 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,300 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $500'}
+{'id': 62, 'created_at': '2022-11-13T13:35:18.027998-08:00', 'updated_at': '2022-11-13T13:35:18.028029-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'A9 North', 'available': 'Inquire for details', 'bedrooms': '1 Bed', 'baths': '1.5 Bath', 'size': '1,300 Sq. Ft.', 'deposit': 'Deposit: $500', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B3 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,376 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 63, 'created_at': '2022-11-13T13:35:18.118391-08:00', 'updated_at': '2022-11-13T13:35:18.118417-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B3 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,376 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B11 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,423 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 64, 'created_at': '2022-11-13T13:35:23.211501-08:00', 'updated_at': '2022-11-13T13:35:23.211531-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B11 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,423 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B8 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,487 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 65, 'created_at': '2022-11-13T13:35:23.293380-08:00', 'updated_at': '2022-11-13T13:35:23.293409-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B8 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,487 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B4 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,528 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 66, 'created_at': '2022-11-13T13:35:23.355649-08:00', 'updated_at': '2022-11-13T13:35:23.355675-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B4 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,528 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B14 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,550 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 67, 'created_at': '2022-11-13T13:35:23.415710-08:00', 'updated_at': '2022-11-13T13:35:23.415736-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B14 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,550 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+[2022-11-13 21:35:44,808] {docker.py:310} INFO - {'company': 'The Bravern', 'floorplan': 'B1 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,579 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 68, 'created_at': '2022-11-13T13:35:23.479406-08:00', 'updated_at': '2022-11-13T13:35:23.479432-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B1 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,579 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B9 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,600 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 69, 'created_at': '2022-11-13T13:35:28.580527-08:00', 'updated_at': '2022-11-13T13:35:28.580580-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B9 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,600 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B5 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,640 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 70, 'created_at': '2022-11-13T13:35:28.677589-08:00', 'updated_at': '2022-11-13T13:35:28.677621-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B5 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,640 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B13 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,644 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 71, 'created_at': '2022-11-13T13:35:33.776559-08:00', 'updated_at': '2022-11-13T13:35:33.776663-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B13 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2 Bath', 'size': '1,644 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B27 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,934 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 72, 'created_at': '2022-11-13T13:35:38.866754-08:00', 'updated_at': '2022-11-13T13:35:38.866806-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B27 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,934 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B23 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,998 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 73, 'created_at': '2022-11-13T13:35:38.962958-08:00', 'updated_at': '2022-11-13T13:35:38.962989-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B23 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '1,998 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B18 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,066 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 74, 'created_at': '2022-11-13T13:35:39.039658-08:00', 'updated_at': '2022-11-13T13:35:39.039683-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B18 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,066 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B26 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,067 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 75, 'created_at': '2022-11-13T13:35:39.103217-08:00', 'updated_at': '2022-11-13T13:35:39.103244-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B26 South', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,067 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B25 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,141 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 76, 'created_at': '2022-11-13T13:35:44.207079-08:00', 'updated_at': '2022-11-13T13:35:44.207140-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B25 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,141 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'B22 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,156 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $1,000'}
+{'id': 77, 'created_at': '2022-11-13T13:35:44.310712-08:00', 'updated_at': '2022-11-13T13:35:44.310754-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'B22 North', 'available': 'Inquire for details', 'bedrooms': '2 Bed', 'baths': '2.5 Bath', 'size': '2,156 Sq. Ft.', 'deposit': 'Deposit: $1,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'South 3103 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,013 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+{'id': 78, 'created_at': '2022-11-13T13:35:44.464738-08:00', 'updated_at': '2022-11-13T13:35:44.464771-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'South 3103 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,013 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'South 3104 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,480 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+{'id': 79, 'created_at': '2022-11-13T13:35:44.540800-08:00', 'updated_at': '2022-11-13T13:35:44.540827-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'South 3104 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,480 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'South 3102 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,665 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+{'id': 80, 'created_at': '2022-11-13T13:35:44.613534-08:00', 'updated_at': '2022-11-13T13:35:44.613562-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'South 3102 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,665 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'North 3101 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,922 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+{'id': 81, 'created_at': '2022-11-13T13:35:44.714665-08:00', 'updated_at': '2022-11-13T13:35:44.714694-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'North 3101 Penthouse', 'available': 'Inquire for details', 'bedrooms': '3 Bed', 'baths': '3.5 Bath', 'size': '3,922 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'North 3102 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '3.5 Bath', 'size': '4,207 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+[2022-11-13 21:35:55,041] {docker.py:310} INFO - {'id': 82, 'created_at': '2022-11-13T13:35:44.796180-08:00', 'updated_at': '2022-11-13T13:35:44.796212-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'North 3102 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '3.5 Bath', 'size': '4,207 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'North 3103 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '3.5 Bath', 'size': '4,796 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+{'id': 83, 'created_at': '2022-11-13T13:35:49.882440-08:00', 'updated_at': '2022-11-13T13:35:49.882468-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'North 3103 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '3.5 Bath', 'size': '4,796 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'South 3301 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '4.5 Bath', 'size': '5,796 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+{'id': 84, 'created_at': '2022-11-13T13:35:49.955608-08:00', 'updated_at': '2022-11-13T13:35:49.955636-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'South 3301 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '4.5 Bath', 'size': '5,796 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+{'company': 'The Bravern', 'floorplan': 'North 3301 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '4.5 Bath', 'size': '5,898 Sq. Ft.', 'rent': 'Call for details', 'deposit': 'Deposit: $5,000'}
+{'id': 85, 'created_at': '2022-11-13T13:35:55.030261-08:00', 'updated_at': '2022-11-13T13:35:55.030368-08:00', 'company': 'The Bravern', 'date': '2022-11-13', 'floorplan': 'North 3301 Penthouse', 'available': 'Inquire for details', 'bedrooms': '4 Bed', 'baths': '4.5 Bath', 'size': '5,898 Sq. Ft.', 'deposit': 'Deposit: $5,000', 'rent': 'Call for details'}
+Scraping job completed!
+[2022-11-13 21:35:55,338] {taskinstance.py:1415} INFO - Marking task as SUCCESS. dag_id=run_webscrapers, task_id=run-webscraper-bravern, execution_date=20220101T000000, start_date=20221113T213344, end_date=20221113T213555
+[2022-11-13 21:35:55,387] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-13 21:35:55,418] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

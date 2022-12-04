@@ -29,8 +29,9 @@ def make_scraper_task(scraper):
 with DAG("run_webscrapers", default_args=default_args, schedule_interval="@once", catchup=False) as dag:
     webscraper_two_lincoln = make_scraper_task("two_lincoln")
     webscraper_bravern = make_scraper_task("bravern")
+    webscraper_uptonflat = make_scraper_task("uptonflat")
 
-    [webscraper_two_lincoln, webscraper_bravern]
+    [webscraper_two_lincoln, webscraper_bravern, webscraper_uptonflat]
     
     
     

@@ -21,7 +21,21 @@ class Apartments(BaseModel):
     rent = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
-        return self.floorplan
+        return self.floorplan or ''
 
     class Meta:
         verbose_name_plural = "Apartments"
+
+class Airline(BaseModel):
+    airline = models.CharField(max_length = 100)
+    departure_time = models.CharField(max_length = 100)
+    destination_time = models.CharField(max_length = 100)
+    price = models.CharField(max_length = 100)
+    stops = models.CharField(max_length = 100)
+    duration = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return self.airline
+    
+    class Meta:
+        verbose_name_plural = 'Airlines'
